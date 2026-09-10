@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tesis.Go — Tu asesor de IA para investigación académica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="landingpage.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="wrap navbar__inner">
+      <a href="#" class="logo">
+        <span class="logo__mark" aria-hidden="true">◆</span>
+        Tesis<span class="logo__accent">.Go</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#recursos">Recursos</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#nosotros">¿Quiénes somos?</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto">Contáctanos</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="login.html" class="btn btn--text">Iniciar sesión</a>
+        <a href="register.html" class="btn btn--outline">Regístrate</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Asesoría académica con IA</p>
+          <h1>
+            Tu tesis avanza mejor<br>
+            con un asesor <em>que nunca duerme</em>.
+          </h1>
+          <p class="hero__lead">
+            Tesis.Go te acompaña en cada etapa de tu investigación — tesis, papers
+            o trabajos académicos — resolviendo dudas, ordenando tus ideas y
+            guiándote paso a paso. No hace el trabajo por ti: te ayuda a hacerlo bien.
+          </p>
+          <div class="hero__actions">
+            <a href="#" class="btn btn--primary">Prueba gratis 7 días</a>
+            <a href="#recursos" class="btn btn--ghost">Ver cómo funciona</a>
+          </div>
+          <p class="hero__note">Para estudiantes de cualquier universidad · sin tarjeta de crédito</p>
+        </div>
+
+        <div class="hero__art" aria-hidden="true">
+          <svg viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vista previa del chat de asesoría de Tesis.Go">
+            <rect x="0" y="0" width="420" height="360" rx="24" class="art-bg"/>
+            <rect x="28" y="28" width="364" height="52" rx="12" class="art-card"/>
+            <circle cx="56" cy="54" r="12" class="art-dot"/>
+            <rect x="80" y="46" width="140" height="8" rx="4" class="art-line-strong"/>
+            <rect x="80" y="60" width="90" height="6" rx="3" class="art-line-soft"/>
+
+            <rect x="28" y="96" width="230" height="70" rx="14" class="art-bubble"/>
+            <rect x="46" y="114" width="150" height="8" rx="4" class="art-line-onbubble"/>
+            <rect x="46" y="130" width="180" height="8" rx="4" class="art-line-onbubble"/>
+            <rect x="46" y="146" width="110" height="8" rx="4" class="art-line-onbubble"/>
+
+            <rect x="162" y="182" width="230" height="70" rx="14" class="art-bubble art-bubble--accent"/>
+            <rect x="180" y="200" width="160" height="8" rx="4" class="art-line-onaccent"/>
+            <rect x="180" y="216" width="120" height="8" rx="4" class="art-line-onaccent"/>
+            <rect x="180" y="232" width="140" height="8" rx="4" class="art-line-onaccent"/>
+
+            <rect x="28" y="284" width="364" height="48" rx="24" class="art-input"/>
+            <rect x="48" y="304" width="180" height="8" rx="4" class="art-line-soft"/>
+            <circle cx="368" cy="308" r="16" class="art-send"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIVERSIDADES -->
+    <section class="universities">
+      <div class="wrap">
+        <p class="universities__label">Usado por estudiantes de universidades como</p>
+        <div class="universities__track-wrap">
+          <div class="universities__track">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Utplogonuevo.svg/960px-Utplogonuevo.svg.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="UTP">
+            <img src="https://d30mzt1bxg5llt.cloudfront.net/public/uploads/images/LOGOTIPO_PRINCIPAL_NEGATIVO_B-N_CMYK.png" alt="Universidad">
+            <img src="https://images.seeklogo.com/logo-png/17/2/universidad-cesar-vallejo-logo-png_seeklogo-179378.png" alt="Universidad César Vallejo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Logo_Universidad_Norbert_Wiener_Powered_by_ASU.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" alt="Universidad Norbert Wiener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Universidad_de_Lima_logo.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" alt="Universidad de Lima">
+            <img src="https://secgen.unmsm.edu.pe/wp-content/uploads/2026/04/unmsm.png" alt="UNMSM">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Uni-logo_transparente_granate.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" alt="UNI">
+            <!-- duplicado para loop continuo -->
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Utplogonuevo.svg/960px-Utplogonuevo.svg.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="" aria-hidden="true">
+            <img src="https://d30mzt1bxg5llt.cloudfront.net/public/uploads/images/LOGOTIPO_PRINCIPAL_NEGATIVO_B-N_CMYK.png" alt="" aria-hidden="true">
+            <img src="https://images.seeklogo.com/logo-png/17/2/universidad-cesar-vallejo-logo-png_seeklogo-179378.png" alt="" aria-hidden="true">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Logo_Universidad_Norbert_Wiener_Powered_by_ASU.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" alt="" aria-hidden="true">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Universidad_de_Lima_logo.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" alt="" aria-hidden="true">
+            <img src="https://secgen.unmsm.edu.pe/wp-content/uploads/2026/04/unmsm.png" alt="" aria-hidden="true">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Uni-logo_transparente_granate.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" alt="" aria-hidden="true">
+            <!-- segunda copia extra para asegurar el loop sin cortes -->
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Utplogonuevo.svg/960px-Utplogonuevo.svg.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="" aria-hidden="true">
+            <img src="https://d30mzt1bxg5llt.cloudfront.net/public/uploads/images/LOGOTIPO_PRINCIPAL_NEGATIVO_B-N_CMYK.png" alt="" aria-hidden="true">
+            <img src="https://images.seeklogo.com/logo-png/17/2/universidad-cesar-vallejo-logo-png_seeklogo-179378.png" alt="" aria-hidden="true">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Logo_Universidad_Norbert_Wiener_Powered_by_ASU.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" alt="" aria-hidden="true">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Universidad_de_Lima_logo.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" alt="" aria-hidden="true">
+            <img src="https://secgen.unmsm.edu.pe/wp-content/uploads/2026/04/unmsm.png" alt="" aria-hidden="true">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Uni-logo_transparente_granate.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" alt="" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section id="recursos" class="features">
+      <div class="wrap">
+        <div class="features__grid">
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 3a5 5 0 0 1 5 5c0 2.2-1.3 3.4-2.2 4.3-.7.7-1.1 1.2-1.2 2H10.4c-.1-.8-.5-1.3-1.2-2C8.3 11.4 7 10.2 7 8a5 5 0 0 1 5-5Z"/><path d="M9.5 17h5"/><path d="M10 20h4"/></svg>
+            </div>
+            <h3>Asesor de IA</h3>
+            <p>Resuelve dudas metodológicas en cada etapa de tu investigación, 24/7.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6"/></svg>
+            </div>
+            <h3>Biblioteca propia</h3>
+            <p>Guías, plantillas y recursos metodológicos organizados por tipo y tema.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            </div>
+            <h3>Búsqueda académica</h3>
+            <p>Encuentra papers reales conectando con bases como Scopus y Web of Science.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><rect x="7" y="11" width="3" height="8"/><rect x="12" y="7" width="3" height="12"/><rect x="17" y="13" width="3" height="6"/></svg>
+            </div>
+            <h3>Progreso claro</h3>
+            <p>Visualiza el avance de tu proyecto y retoma justo donde lo dejaste.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Pensado para tu U</h3>
+            <p>Se integra como beneficio institucional, respaldando tu formación académica.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="beneficios" class="benefits">
+      <div class="wrap benefits__inner">
+        <div class="benefits__copy">
+          <p class="eyebrow">Por qué usar Tesis.Go</p>
+          <h2>Investigar bien no debería depender de la suerte.</h2>
+          <p class="section-lead">
+            No todos tienen un asesor disponible cuando más lo necesitan.
+            Tesis.Go pone ese acompañamiento al alcance de cualquier estudiante,
+            sin importar la universidad en la que estudie.
+          </p>
+        </div>
+
+        <ul class="benefits__list">
+          <li>
+            <span class="benefits__check" aria-hidden="true">✓</span>
+            <div>
+              <h3>Ahorra tiempo real</h3>
+              <p>Deja de perder horas buscando por dónde empezar: el asesor te ordena el camino.</p>
+            </div>
+          </li>
+          <li>
+            <span class="benefits__check" aria-hidden="true">✓</span>
+            <div>
+              <h3>Escribe con más rigor</h3>
+              <p>Recibe observaciones sobre estructura, coherencia y metodología antes de entregar.</p>
+            </div>
+          </li>
+          <li>
+            <span class="benefits__check" aria-hidden="true">✓</span>
+            <div>
+              <h3>Reduce la ansiedad de la tesis</h3>
+              <p>Consulta tus dudas al momento, sin esperar el horario de asesoría de tu asesor.</p>
+            </div>
+          </li>
+          <li>
+            <span class="benefits__check" aria-hidden="true">✓</span>
+            <div>
+              <h3>Construye el hábito de investigar</h3>
+              <p>No solo te ayuda a entregar: te enseña a sostener el proceso en tu próximo trabajo.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="nosotros" class="about">
+      <div class="wrap about__inner">
+        <p class="eyebrow">¿Quiénes somos?</p>
+        <h2>Creemos que toda investigación merece un buen acompañamiento.</h2>
+        <p class="section-lead">
+          Somos un equipo que vio de cerca lo solitario que puede ser hacer una tesis
+          o un trabajo académico: dudas que nadie responde a tiempo, procesos que se
+          sienten confusos y estudiantes que abandonan no por falta de capacidad, sino
+          por falta de guía. Construimos Tesis.Go para cambiar eso: un asesor accesible
+          para cualquier estudiante, en cualquier universidad, en cualquier etapa de su
+          investigación.
+        </p>
+      </div>
+    </section>
+
+    <!-- PLANES -->
+    <section id="planes" class="pricing">
+      <div class="wrap">
+        <div class="pricing__head">
+          <p class="eyebrow">Planes</p>
+          <h2>Elige cómo quieres avanzar</h2>
+          <p class="section-lead">Precios referenciales. Sin permanencia, cancela cuando quieras.</p>
+        </div>
+
+        <div class="pricing__grid">
+
+          <article class="plan">
+            <h3>Económico</h3>
+            <p class="plan__desc">Para empezar a ordenar tu investigación.</p>
+            <p class="plan__price">S/ 19<span>/mes</span></p>
+            <ul class="plan__features">
+              <li>50 consultas al asesor de IA al mes</li>
+              <li>Acceso a biblioteca básica</li>
+              <li>Plantillas esenciales</li>
+              <li>Historial limitado</li>
+            </ul>
+            <a href="#" class="btn btn--outline plan__cta">Elegir plan</a>
+          </article>
+
+          <article class="plan plan--featured">
+            <p class="plan__badge">Más flexible</p>
+            <h3>Pro Ilimitado</h3>
+            <p class="plan__desc">Para quien investiga de forma constante.</p>
+            <p class="plan__price">S/ 149<span>/mes</span></p>
+            <ul class="plan__features">
+              <li>Consultas ilimitadas al asesor de IA</li>
+              <li>Biblioteca completa</li>
+              <li>Búsqueda en Scopus / Web of Science</li>
+              <li>Exportación de referencias y soporte prioritario</li>
+            </ul>
+            <a href="#" class="btn btn--primary plan__cta">Elegir Pro Ilimitado</a>
+          </article>
+
+          <article class="plan">
+            <h3>Por créditos</h3>
+            <p class="plan__desc">Ideal para consultas puntuales, no para uso frecuente.</p>
+            <p class="plan__price">Desde S/ 8<span>/crédito</span></p>
+            <ul class="plan__features">
+              <li>Paquete 10 créditos — S/ 78</li>
+              <li>Paquete 30 créditos — S/ 210</li>
+              <li>1 crédito = 1 consulta avanzada</li>
+              <li>Los créditos no caducan</li>
+            </ul>
+            <a href="#" class="btn btn--outline plan__cta">Comprar créditos</a>
+            <p class="plan__note">Desde ~20 consultas al mes.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+      <div class="wrap contact__inner">
+        <div class="contact__copy">
+          <p class="eyebrow">Contáctanos</p>
+          <h2>¿Tienes dudas o quieres llevar Tesis.Go a tu universidad?</h2>
+          <p class="section-lead">Escríbenos y te respondemos a la brevedad.</p>
+
+          <ul class="contact__details">
+            <li><strong>Correo:</strong> hola@tesis.go</li>
+            <li><strong>Teléfono:</strong> +51 999 999 999</li>
+            <li><strong>Ubicación:</strong> Lima, Perú</li>
+          </ul>
+        </div>
+
+        <form class="contact__form">
+          <label>
+            Nombre
+            <input type="text" placeholder="Tu nombre">
+          </label>
+          <label>
+            Correo
+            <input type="email" placeholder="tucorreo@ejemplo.com">
+          </label>
+          <label>
+            Mensaje
+            <textarea rows="4" placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="cta-final">
+      <div class="wrap cta-final__inner">
+        <h2>Investiga con respaldo, no solo con esfuerzo.</h2>
+        <p>Únete gratis y empieza tu próxima etapa de investigación con Tesis.Go.</p>
+        <a href="#" class="btn btn--primary">Prueba gratis 7 días</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a href="#" class="logo logo--footer">
+        <span class="logo__mark" aria-hidden="true">◆</span>
+        Tesis<span class="logo__accent">.Go</span>
+      </a>
+
+      <nav class="footer__links">
+        <a href="#recursos">Recursos</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#nosotros">¿Quiénes somos?</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto">Contáctanos</a>
+      </nav>
+
+      <p class="footer__copy">© 2026 Tesis.Go. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
