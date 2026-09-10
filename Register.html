@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crea tu cuenta - Tesis.go</title>
+  
+  <!-- Fuentes Google: Fraunces e Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="landingpage.css">
+</head>
+<body class="auth-body">
+
+  <main class="auth-page">
+
+    <!-- Logo fuera de la tarjeta -->
+    <a href="index.html" class="logo auth-page__logo">
+      <span class="logo__mark">✦</span>
+      Tesis<span class="logo__accent">.go</span>
+    </a>
+
+    <!-- Tarjeta principal -->
+    <div class="auth-card auth-card--wide">
+      
+      <!-- Icono superior -->
+      <div class="auth-card__avatar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </div>
+
+      <!-- Título y Subtítulo -->
+      <h1>Crea tu cuenta</h1>
+      <p class="auth-card__lead">
+        Regístrate gratis y empieza a investigar con acompañamiento.
+      </p>
+
+      <!-- Formulario de registro -->
+      <form class="auth-form" action="/register" method="POST">
+        
+        <!-- Nombre y Apellido -->
+        <div class="auth-form__row">
+          <label>
+            Nombre
+            <input type="text" name="first_name" placeholder="Tu nombre" required>
+          </label>
+          <label>
+            Apellido
+            <input type="text" name="last_name" placeholder="Tu apellido" required>
+          </label>
+        </div>
+
+        <!-- Correo institucional -->
+        <label>
+          Correo institucional
+          <input type="email" name="email" placeholder="tunombre@universidad.edu.pe" required>
+        </label>
+
+        <!-- Contraseña y Confirmación -->
+        <div class="auth-form__row">
+          <label>
+            Contraseña
+            <input type="password" name="password" placeholder="Mínimo 8 caracteres" required minlength="8">
+          </label>
+          <label>
+            Verificar contraseña
+            <input type="password" name="confirm_password" placeholder="Repite tu contraseña" required minlength="8">
+          </label>
+        </div>
+        <p class="auth-form__hint">La contraseña debe tener al menos 8 caracteres.</p>
+
+        <!-- Universidad -->
+        <label>
+          Universidad
+          <select name="university" required>
+            <option value="" disabled selected>Selecciona tu universidad</option>
+            <option value="upc">Universidad Peruana de Ciencias Aplicadas (UPC)</option>
+            <option value="pucp">Pontificia Universidad Católica del Perú (PUCP)</option>
+            <option value="san_marcos">Universidad Nacional Mayor de San Marcos (UNMSM)</option>
+            <option value="uni">Universidad Nacional de Ingeniería (UNI)</option>
+            <option value="otra">Otra universidad</option>
+          </select>
+        </label>
+
+        <!-- Teléfono -->
+        <label>
+          Teléfono
+          <input type="tel" name="phone" placeholder="+51 999 999 999">
+        </label>
+
+        <!-- Botón para registrarse -->
+        <button type="submit" class="btn btn--primary auth-form__submit">
+          Regístrate
+        </button>
+      </form>
+
+      <!-- Enlace para ir al login -->
+      <p class="auth-card__switch">
+        ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
+      </p>
+
+    </div>
+  </main>
+
+</body>
+</html>

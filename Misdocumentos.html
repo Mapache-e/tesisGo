@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis documentos — Tesis.Go</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="MisDocumentos.css">
+</head>
+<body class="dash-body">
+
+  <div class="dash">
+
+    <!-- SIDEBAR -->
+    <aside class="dash-sidebar">
+      <button class="dash-sidebar__collapse" aria-label="Colapsar menú">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <svg class="dash-sidebar__collapse-arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <nav class="dash-nav">
+        <a href="inicio.html" class="dash-nav__item">Inicio</a>
+        <a href="AsesorIA.html" class="dash-nav__item">Asesor IA</a>
+        <a href="Biblioteca.html" class="dash-nav__item">Biblioteca</a>
+        <a href="MisDocumentos.html" class="dash-nav__item is-active">Mis documentos</a>
+      </nav>
+
+      <a href="Configuracion.html" class="dash-nav__item dash-nav__item--settings">Configuración</a>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="dash-main">
+
+      <header class="dash-header">
+        <h1>Mis documentos</h1>
+        <a href="Configuracion.html" class="dash-header__avatar" aria-label="Ir a configuración">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/><path d="M8 14c1 1.2 2.3 1.8 4 1.8s3-.6 4-1.8"/></svg>
+        </a>
+      </header>
+
+      <main class="dash-content">
+
+        <!-- TABS -->
+        <div class="doc-tabs" role="tablist">
+          <button class="doc-tab is-active" type="button">Prioritarios</button>
+          <button class="doc-tab" type="button">Prueba</button>
+          <button class="doc-tab" type="button">Borrados</button>
+        </div>
+
+        <!-- DOCUMENT LIST -->
+        <div class="doc-list">
+
+          <article class="doc-row">
+            <span class="doc-row__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+            </span>
+            <div class="doc-row__info">
+              <p class="doc-row__title">Marketing digital en PYMES</p>
+              <p class="doc-row__type">Tesis · Editado 12/05/2024</p>
+            </div>
+            <div class="doc-row__progress">
+              <div class="progress-bar"><span style="width:20%"></span></div>
+              <span class="progress-bar__label">20%</span>
+            </div>
+            <button class="doc-row__actions" aria-label="Más acciones">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="12" cy="19" r="1.2"/></svg>
+            </button>
+          </article>
+
+          <article class="doc-row">
+            <span class="doc-row__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+            </span>
+            <div class="doc-row__info">
+              <p class="doc-row__title">Impacto de la IA en la educación</p>
+              <p class="doc-row__type">Paper · Editado 10/05/2024</p>
+            </div>
+            <div class="doc-row__progress">
+              <div class="progress-bar"><span style="width:50%"></span></div>
+              <span class="progress-bar__label">50%</span>
+            </div>
+            <button class="doc-row__actions" aria-label="Más acciones">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="12" cy="19" r="1.2"/></svg>
+            </button>
+          </article>
+
+          <article class="doc-row">
+            <span class="doc-row__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+            </span>
+            <div class="doc-row__info">
+              <p class="doc-row__title">Satisfacción estudiantil universitaria</p>
+              <p class="doc-row__type">Tesis · Editado 08/05/2024</p>
+            </div>
+            <div class="doc-row__progress">
+              <div class="progress-bar"><span style="width:80%"></span></div>
+              <span class="progress-bar__label">80%</span>
+            </div>
+            <button class="doc-row__actions" aria-label="Más acciones">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="12" cy="19" r="1.2"/></svg>
+            </button>
+          </article>
+
+          <article class="doc-row">
+            <span class="doc-row__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+            </span>
+            <div class="doc-row__info">
+              <p class="doc-row__title">Estrategias de branding personal</p>
+              <p class="doc-row__type">Trabajo académico · Editado 05/05/2024</p>
+            </div>
+            <div class="doc-row__progress">
+              <div class="progress-bar"><span style="width:35%"></span></div>
+              <span class="progress-bar__label">35%</span>
+            </div>
+            <button class="doc-row__actions" aria-label="Más acciones">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="12" cy="19" r="1.2"/></svg>
+            </button>
+          </article>
+
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

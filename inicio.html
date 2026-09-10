@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio — Tesis.Go</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="inicio.css">
+</head>
+<body class="dash-body">
+
+  <div class="dash">
+
+    <!-- SIDEBAR -->
+    <aside class="dash-sidebar">
+      <button class="dash-sidebar__collapse" aria-label="Colapsar menú">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <svg class="dash-sidebar__collapse-arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <nav class="dash-nav">
+        <a href="inicio.html" class="dash-nav__item is-active">Inicio</a>
+        <a href="AsesorIA.html" class="dash-nav__item">Asesor IA</a>
+        <a href="Biblioteca.html" class="dash-nav__item">Biblioteca</a>
+        <a href="MisDocumentos.html" class="dash-nav__item">Mis documentos</a>
+      </nav>
+
+      <a href="Configuracion.html" class="dash-nav__item dash-nav__item--settings">Configuración</a>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="dash-main">
+
+      <header class="dash-header">
+        <h1>Hola, Diego</h1>
+        <a href="Configuracion.html" class="dash-header__avatar" aria-label="Ir a configuración">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/><path d="M8 14c1 1.2 2.3 1.8 4 1.8s3-.6 4-1.8"/></svg>
+        </a>
+      </header>
+
+      <main class="dash-content">
+
+        <!-- STAT CARDS -->
+        <div class="stat-grid">
+          <article class="stat-card">
+            <p class="stat-card__label">Proyectos</p>
+            <p class="stat-card__value">3</p>
+            <p class="stat-card__sub">activos</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-card__label">Guardados</p>
+            <p class="stat-card__value">18</p>
+            <p class="stat-card__sub">recursos</p>
+          </article>
+          <article class="stat-card stat-card--accent">
+            <p class="stat-card__label">Saldo</p>
+            <p class="stat-card__value">12</p>
+            <p class="stat-card__sub">créditos</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-card__label">Horas</p>
+            <p class="stat-card__value">5h 30m</p>
+            <p class="stat-card__sub">esta semana</p>
+          </article>
+        </div>
+
+        <!-- PROGRESS + LAST EDITS -->
+        <div class="panel-grid">
+
+          <section class="panel progress-panel">
+            <div class="progress-ring" role="img" aria-label="Progreso del proyecto: 50%">
+              <svg viewBox="0 0 120 120">
+                <circle class="progress-ring__track" cx="60" cy="60" r="50"/>
+                <circle class="progress-ring__value" cx="60" cy="60" r="50"/>
+              </svg>
+              <span class="progress-ring__text">50%</span>
+            </div>
+
+            <div class="progress-panel__info">
+              <p class="progress-panel__project">Marketing digital en PYMES</p>
+
+              <div class="progress-panel__tags">
+                <span class="tag">Estado del proyecto: En desarrollo</span>
+                <span class="tag">Marco teórico</span>
+              </div>
+
+              <a href="AsesorIA.html" class="btn btn--primary">Continuar</a>
+            </div>
+          </section>
+
+          <section class="panel edits-panel">
+            <h2>Última edición</h2>
+            <ul class="edits-list">
+              <li>
+                <span class="edits-list__dot" aria-hidden="true"></span>
+                Marco teórico — Marketing digital en PYMES
+                <time>12/05/2024</time>
+              </li>
+              <li>
+                <span class="edits-list__dot" aria-hidden="true"></span>
+                Metodología — Impacto de IA en la educación
+                <time>10/05/2024</time>
+              </li>
+              <li>
+                <span class="edits-list__dot" aria-hidden="true"></span>
+                Introducción — Satisfacción estudiantil universitaria
+                <time>08/05/2024</time>
+              </li>
+              <li>
+                <span class="edits-list__dot" aria-hidden="true"></span>
+                Objetivos — Estrategias de branding personal
+                <time>05/05/2024</time>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

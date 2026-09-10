@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblioteca — Tesis.Go</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Biblioteca.css">
+</head>
+<body class="dash-body">
+
+  <div class="dash">
+
+    <!-- SIDEBAR -->
+    <aside class="dash-sidebar">
+      <button class="dash-sidebar__collapse" aria-label="Colapsar menú">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <svg class="dash-sidebar__collapse-arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <nav class="dash-nav">
+        <a href="inicio.html" class="dash-nav__item">Inicio</a>
+        <a href="AsesorIA.html" class="dash-nav__item">Asesor IA</a>
+        <a href="Biblioteca.html" class="dash-nav__item is-active">Biblioteca</a>
+        <a href="MisDocumentos.html" class="dash-nav__item">Mis documentos</a>
+      </nav>
+
+      <a href="Configuracion.html" class="dash-nav__item dash-nav__item--settings">Configuración</a>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="dash-main">
+
+      <header class="dash-header">
+        <h1>Biblioteca</h1>
+        <a href="Configuracion.html" class="dash-header__avatar" aria-label="Ir a configuración">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/><path d="M8 14c1 1.2 2.3 1.8 4 1.8s3-.6 4-1.8"/></svg>
+        </a>
+      </header>
+
+      <main class="dash-content">
+
+        <!-- SEARCH + FILTERS -->
+        <div class="lib-search">
+          <div class="search-field">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" placeholder="Buscar idea">
+          </div>
+          <button type="button" class="btn btn--outline">
+            <svg viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+            Filtros
+          </button>
+        </div>
+
+        <!-- TABS -->
+        <div class="lib-tabs" role="tablist">
+          <button class="lib-tab is-active" type="button">Todos</button>
+          <button class="lib-tab" type="button">Guías metodológicas</button>
+          <button class="lib-tab" type="button">Plantillas</button>
+          <button class="lib-tab" type="button">Tesis ejemplos</button>
+          <button class="lib-tab" type="button">Normas APA</button>
+        </div>
+
+        <!-- RESOURCE GRID -->
+        <div class="resource-grid">
+
+          <article class="resource-card">
+            <span class="resource-card__type resource-card__type--pdf">PDF</span>
+            <h3>Guía para redacción de tesis</h3>
+            <p class="resource-card__cat">Guía metodológica</p>
+            <p class="resource-card__meta">2.1 MB</p>
+          </article>
+
+          <article class="resource-card">
+            <span class="resource-card__type resource-card__type--pdf">PDF</span>
+            <h3>Metodología de la investigación</h3>
+            <p class="resource-card__cat">Guía metodológica</p>
+            <p class="resource-card__meta">1.8 MB</p>
+          </article>
+
+          <article class="resource-card">
+            <span class="resource-card__type resource-card__type--docx">DOCX</span>
+            <h3>Plantilla tesis UTP 2024</h3>
+            <p class="resource-card__cat">Plantilla</p>
+            <p class="resource-card__meta">1.5 MB</p>
+          </article>
+
+          <article class="resource-card">
+            <span class="resource-card__type resource-card__type--pdf">PDF</span>
+            <h3>Cómo publicar en revistas indexadas</h3>
+            <p class="resource-card__cat">Guía metodológica</p>
+            <p class="resource-card__meta">1.9 MB</p>
+          </article>
+
+          <article class="resource-card">
+            <span class="resource-card__type resource-card__type--pdf">PDF</span>
+            <h3>Manual APA 7ma edición</h3>
+            <p class="resource-card__cat">Normas APA</p>
+            <p class="resource-card__meta">3.2 MB</p>
+          </article>
+
+          <article class="resource-card">
+            <span class="resource-card__type resource-card__type--docx">DOCX</span>
+            <h3>Plantilla de matriz de consistencia</h3>
+            <p class="resource-card__cat">Plantilla</p>
+            <p class="resource-card__meta">0.9 MB</p>
+          </article>
+
+          <article class="resource-card">
+            <span class="resource-card__type resource-card__type--pdf">PDF</span>
+            <h3>Tesis ejemplo: Marketing digital en pymes</h3>
+            <p class="resource-card__cat">Tesis ejemplo</p>
+            <p class="resource-card__meta">4.6 MB</p>
+          </article>
+
+          <article class="resource-card">
+            <span class="resource-card__type resource-card__type--pdf">PDF</span>
+            <h3>Cómo citar fuentes digitales en APA</h3>
+            <p class="resource-card__cat">Normas APA</p>
+            <p class="resource-card__meta">0.7 MB</p>
+          </article>
+
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

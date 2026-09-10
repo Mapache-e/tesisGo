@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar sesión — Tesis.Go</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="landingpage.css">
+</head>
+<body class="auth-body">
+
+  <div class="auth-page">
+    <a href="index.html" class="logo auth-page__logo">
+      <span class="logo__mark" aria-hidden="true">◆</span>
+      Tesis<span class="logo__accent">.Go</span>
+    </a>
+
+    <div class="auth-card">
+      <div class="auth-card__avatar" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+      </div>
+
+      <h1>Bienvenido de vuelta</h1>
+      <p class="auth-card__lead">Inicia sesión para continuar con tu investigación.</p>
+
+      <form class="auth-form">
+        <label>
+          Correo institucional
+          <input type="email" placeholder="tunombre@universidad.edu.pe" required>
+        </label>
+
+        <label>
+          Contraseña
+          <input type="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
+        </label>
+
+        <a href="#" class="auth-form__forgot">¿Olvidaste tu contraseña?</a>
+
+        <a href="inicio.html" class="btn btn--primary auth-form__submit">Iniciar sesión</a>
+      </form>
+
+      <p class="auth-card__switch">
+        ¿No tienes cuenta? <a href="Register.html">Regístrate</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

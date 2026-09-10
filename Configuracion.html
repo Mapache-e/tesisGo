@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configuración — Tesis.Go</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Configuracion.css">
+</head>
+<body class="dash-body">
+
+  <div class="dash">
+
+    <!-- SIDEBAR -->
+    <aside class="dash-sidebar">
+      <button class="dash-sidebar__collapse" aria-label="Colapsar menú">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <svg class="dash-sidebar__collapse-arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <nav class="dash-nav">
+        <a href="inicio.html" class="dash-nav__item">Inicio</a>
+        <a href="AsesorIA.html" class="dash-nav__item">Asesor IA</a>
+        <a href="Biblioteca.html" class="dash-nav__item">Biblioteca</a>
+        <a href="MisDocumentos.html" class="dash-nav__item">Mis documentos</a>
+      </nav>
+
+      <a href="Configuracion.html" class="dash-nav__item dash-nav__item--settings is-active">Configuración</a>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="dash-main">
+
+      <header class="dash-header">
+        <h1>Configuración</h1>
+        <a href="Configuracion.html" class="dash-header__avatar" aria-label="Ir a configuración">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/><path d="M8 14c1 1.2 2.3 1.8 4 1.8s3-.6 4-1.8"/></svg>
+        </a>
+      </header>
+
+      <main class="dash-content">
+
+        <!-- PERFIL -->
+        <section class="settings-panel">
+          <h2>Perfil</h2>
+
+          <div class="profile-block">
+            <div class="profile-photo">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+              <button type="button" class="profile-photo__edit" aria-label="Cambiar foto de perfil">
+                <svg viewBox="0 0 24 24"><path d="M4 13.5V19h5.5L19 9.5l-5.5-5.5L4 13.5Z"/></svg>
+              </button>
+            </div>
+
+            <div class="profile-fields">
+              <label>
+                Nombre
+                <input type="text" value="Diego">
+              </label>
+              <label>
+                Apellido
+                <input type="text" value="Ramírez">
+              </label>
+              <label>
+                Correo institucional
+                <input type="email" value="diego.ramirez@utp.edu.pe">
+              </label>
+              <label>
+                Universidad
+                <select>
+                  <option selected>Universidad Tecnológica del Perú (UTP)</option>
+                  <option>Pontificia Universidad Católica del Perú (PUCP)</option>
+                  <option>Universidad César Vallejo (UCV)</option>
+                  <option>Universidad Norbert Wiener</option>
+                  <option>Universidad de Lima</option>
+                  <option>Universidad Nacional Mayor de San Marcos (UNMSM)</option>
+                  <option>Universidad Nacional de Ingeniería (UNI)</option>
+                  <option>Otra universidad</option>
+                </select>
+              </label>
+              <label>
+                Teléfono
+                <input type="tel" value="+51 987 654 321">
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn--primary">Guardar cambios</button>
+        </section>
+
+        <!-- SEGURIDAD -->
+        <section class="settings-panel">
+          <h2>Cambiar contraseña</h2>
+
+          <div class="form-grid">
+            <label>
+              Contraseña actual
+              <input type="password" placeholder="••••••••">
+            </label>
+            <label>
+              Nueva contraseña
+              <input type="password" placeholder="Mínimo 8 caracteres" minlength="8">
+            </label>
+            <label>
+              Verificar nueva contraseña
+              <input type="password" placeholder="Repite la nueva contraseña" minlength="8">
+            </label>
+          </div>
+
+          <button type="button" class="btn btn--outline">Actualizar contraseña</button>
+        </section>
+
+        <!-- PREFERENCIAS -->
+        <section class="settings-panel">
+          <h2>Preferencias</h2>
+
+          <div class="preference-row">
+            <div>
+              <p class="preference-row__title">Modo oscuro</p>
+              <p class="preference-row__desc">Cambia la apariencia de tu panel a un tema oscuro.</p>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="theme-toggle">
+              <span class="switch__track"><span class="switch__thumb"></span></span>
+            </label>
+          </div>
+        </section>
+
+        <!-- PLAN -->
+        <section class="settings-panel">
+          <h2>Mejora tu plan</h2>
+          <p class="settings-panel__lead">Plan actual: <strong>Estándar</strong> (plan gratuito)</p>
+
+          <div class="plan-grid">
+            <article class="plan-card">
+              <h3>Económico</h3>
+              <p class="plan-card__price">S/ 19<span>/mes</span></p>
+              <p class="plan-card__desc">Para empezar a ordenar tu investigación.</p>
+              <button type="button" class="btn btn--outline">Elegir plan</button>
+            </article>
+
+            <article class="plan-card plan-card--featured">
+              <p class="plan-card__badge">Más flexible</p>
+              <h3>Pro Ilimitado</h3>
+              <p class="plan-card__price">S/ 149<span>/mes</span></p>
+              <p class="plan-card__desc">Para quien investiga de forma constante.</p>
+              <button type="button" class="btn btn--primary">Elegir Pro Ilimitado</button>
+            </article>
+
+            <article class="plan-card">
+              <h3>Por créditos</h3>
+              <p class="plan-card__price">Desde S/ 8<span>/crédito</span></p>
+              <p class="plan-card__desc">Ideal para consultas puntuales, no para uso frecuente.</p>
+              <button type="button" class="btn btn--outline">Comprar créditos</button>
+              <p class="plan-card__note">Desde ~20 consultas al mes, te conviene más el plan Pro Ilimitado.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- SOPORTE -->
+        <section class="settings-panel support-panel">
+          <div class="support-panel__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2 1.8-2 3.3"/><circle cx="12" cy="16.5" r="0.3"/></svg>
+          </div>
+          <div class="support-panel__copy">
+            <h2>¿Necesitas ayuda?</h2>
+            <p>Escríbenos a soporte@tesis.go y te respondemos a la brevedad.</p>
+          </div>
+          <a href="mailto:soporte@tesis.go" class="btn btn--outline">Contactar soporte</a>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
