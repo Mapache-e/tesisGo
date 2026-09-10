@@ -7,7 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="Biblioteca.css">
+<!-- 1. CORREGIDO: El archivo CSS de biblioteca ahora se busca en minúsculas -->
+<link rel="stylesheet" href="biblioteca.css">
 </head>
 <body class="dash-body">
 
@@ -20,14 +21,16 @@
         <svg class="dash-sidebar__collapse-arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
       </button>
 
+      <!-- 2. CORREGIDO: Todos los enlaces en minúsculas y la clase verde 'is-active' puesta en Biblioteca -->
       <nav class="dash-nav">
         <a href="inicio.html" class="dash-nav__item">Inicio</a>
         <a href="asesoria.html" class="dash-nav__item">Asesor IA</a>
-        <a href="Biblioteca.html" class="dash-nav__item">Biblioteca</a>
-        <a href="misdocumentos.html" class="dash-nav__item is-active">Mis documentos</a>
+        <a href="biblioteca.html" class="dash-nav__item is-active">Biblioteca</a>
+        <a href="misdocumentos.html" class="dash-nav__item">Mis documentos</a>
       </nav>
 
-      <a href="Configuracion.html" class="dash-nav__item dash-nav__item--settings">Configuración</a>
+      <!-- 3. CORREGIDO: Enlace de configuración en minúsculas -->
+      <a href="configuracion.html" class="dash-nav__item dash-nav__item--settings">Configuración</a>
     </aside>
 
     <!-- MAIN -->
@@ -35,7 +38,7 @@
 
       <header class="dash-header">
         <h1>Biblioteca</h1>
-        <a href="Configuracion.html" class="dash-header__avatar" aria-label="Ir a configuración">
+        <a href="configuracion.html" class="dash-header__avatar" aria-label="Ir a configuración">
           <svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/><path d="M8 14c1 1.2 2.3 1.8 4 1.8s3-.6 4-1.8"/></svg>
         </a>
       </header>
