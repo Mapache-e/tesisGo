@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="es" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#203824">
+
+  <title>Asesor IA | TesisLive</title>
+
+  <link rel="icon" href="assets/logo-icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="asesor-ia.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="asesor-ia.js" defer></script>
+</head>
+
+<body>
+<div class="app-shell">
+
+  <!-- BARRA LATERAL -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+      <a class="brand" href="dashboard.html" title="TesisLive">
+        <img src="assets/logo-icono.png" alt="">
+        <span class="sidebar-label">Tesis<strong>Live</strong></span>
+      </a>
+
+      <button
+        class="sidebar-collapse"
+        id="sidebarCollapse"
+        type="button"
+        aria-label="Contraer menú"
+        title="Contraer menú"
+      >
+        <i data-lucide="panel-left-close"></i>
+      </button>
+    </div>
+
+    <div class="sidebar-content">
+
+      <p class="sidebar-caption sidebar-label">
+        ESPACIO DE TRABAJO
+      </p>
+
+      <nav class="sidebar-nav" aria-label="Menú principal">
+
+        <a class="nav-link" href="dashboard.html"
+          data-page="inicio" title="Inicio">
+          <i data-lucide="layout-dashboard"></i>
+          <span class="sidebar-label">Inicio</span>
+        </a>
+
+        <a class="nav-link" href="asesor-ia.html"
+          data-page="asesor-ia" title="Asesor IA">
+          <i data-lucide="bot"></i>
+          <span class="sidebar-label">Asesor IA</span>
+        </a>
+
+        <a class="nav-link" href="proyectos.html"
+          data-page="proyectos" title="Mis proyectos">
+          <i data-lucide="folder-open"></i>
+          <span class="sidebar-label">Mis proyectos</span>
+        </a>
+
+        <a class="nav-link" href="biblioteca.html"
+          data-page="biblioteca" title="Biblioteca">
+          <i data-lucide="library-big"></i>
+          <span class="sidebar-label">Biblioteca</span>
+        </a>
+
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+
+      <a class="nav-link" href="configuracion.html"
+        data-page="configuracion" title="Configuración">
+        <i data-lucide="settings"></i>
+        <span class="sidebar-label">Configuración</span>
+      </a>
+
+      <a class="nav-link" href="login.html"
+        id="logoutLink" title="Salir">
+        <i data-lucide="log-out"></i>
+        <span class="sidebar-label">Salir</span>
+      </a>
+
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">D</div>
+        <div class="sidebar-user-info sidebar-label">
+          <strong>Diego</strong>
+          <small>Plan Pro</small>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ÁREA PRINCIPAL -->
+  <div class="main-area advisor-main-area">
+
+    <!-- HEADER UNIFICADO -->
+    <header class="dashboard-header">
+
+      <div class="header-left">
+        <button class="mobile-menu-button"
+          id="mobileMenu"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <div class="header-breadcrumb">
+          <span>Mi espacio</span>
+          <i data-lucide="chevron-right"></i>
+          <strong>Asesor IA</strong>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <button class="header-icon-button"
+          id="notificationButton"
+          type="button"
+          aria-label="Notificaciones"
+          aria-expanded="false">
+          <i data-lucide="bell"></i>
+          <span class="notification-dot"></span>
+        </button>
+
+        <div class="header-divider"></div>
+
+        <div class="header-profile">
+          <div class="header-profile-info">
+            <strong>Diego</strong>
+            <span>Estudiante</span>
+          </div>
+          <div class="profile-avatar">D</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HISTORIAL Y CHAT -->
+    <div class="advisor-layout" id="advisorLayout">
+
+      <!-- HISTORIAL -->
+      <aside
+        class="conversation-panel"
+        id="conversationPanel"
+        aria-label="Historial de conversaciones"
+      >
+
+        <div class="conversation-panel-header">
+
+          <div>
+            <h2>Conversaciones</h2>
+            <p>Tu historial académico</p>
+          </div>
+
+          <button
+            class="history-icon-button"
+            id="panelToggle"
+            type="button"
+            aria-label="Ocultar historial"
+            title="Ocultar historial"
+          >
+            <i data-lucide="panel-left-close"></i>
+          </button>
+
+        </div>
+
+        <!-- NUEVA CONVERSACIÓN -->
+        <button
+          class="new-chat-button"
+          id="newChatButton"
+          type="button"
+        >
+          <i data-lucide="plus"></i>
+          Nueva conversación
+        </button>
+
+        <!-- BUSCADOR -->
+        <div class="conversation-search">
+          <i data-lucide="search"></i>
+
+          <input
+            type="search"
+            id="searchChats"
+            placeholder="Buscar conversación..."
+            aria-label="Buscar conversaciones"
+          >
+        </div>
+
+        <p class="conversation-group-label">RECIENTES</p>
+
+        <div
+          class="conversation-list"
+          id="conversationList"
+          aria-label="Lista de conversaciones"
+        ></div>
+
+        <div class="conversation-panel-footer">
+          <i data-lucide="lock-keyhole"></i>
+          Tu espacio personal de investigación
+        </div>
+
+      </aside>
+
+      <!-- ASESOR IA -->
+      <section class="chat-section" aria-label="Conversación académica">
+
+        <div class="chat-topline">
+
+          <div class="chat-topline-left">
+
+            <!-- APARECEN CUANDO EL HISTORIAL ESTÁ OCULTO -->
+            <button
+              class="chat-toolbar-button"
+              id="openHistory"
+              type="button"
+              aria-label="Mostrar historial"
+              title="Mostrar historial"
+              hidden
+            >
+              <i data-lucide="panel-left-open"></i>
+            </button>
+
+            <button
+              class="chat-toolbar-button"
+              id="newChatCollapsed"
+              type="button"
+              aria-label="Nueva conversación"
+              title="Nueva conversación"
+              hidden
+            >
+              <i data-lucide="plus"></i>
+            </button>
+
+            <div class="assistant-symbol">
+              <img src="assets/logo-icono.png" alt="">
+            </div>
+
+            <div class="assistant-heading">
+              <strong>TesisLive</strong>
+              <span>Asesor de investigación académica</span>
+            </div>
+
+          </div>
+
+          <span class="demo-status">
+            <span class="status-dot"></span>
+            Modo demostración
+          </span>
+
+        </div>
+
+        <!-- MENSAJES -->
+        <div class="messages-scroller" id="messagesScroller">
+          <div class="messages-inner" id="messages">
+            <!-- JavaScript crea los mensajes -->
+          </div>
+        </div>
+
+        <!-- ESCRIBIR MENSAJE -->
+        <div class="composer-zone">
+
+          <div class="composer-wrap">
+
+            <!-- VISTA PREVIA DE ARCHIVO -->
+            <div
+              class="attachment-preview"
+              id="attachmentPreview"
+              hidden
+            >
+              <i data-lucide="file-text"></i>
+
+              <div class="attachment-info">
+                <strong id="attachmentName"></strong>
+                <span id="attachmentSize"></span>
+              </div>
+
+              <button
+                class="chat-toolbar-button"
+                id="removeAttachment"
+                type="button"
+                aria-label="Quitar archivo"
+              >
+                <i data-lucide="x"></i>
+              </button>
+            </div>
+
+            <form class="message-form" id="messageForm">
+
+              <textarea
+                id="messageInput"
+                rows="1"
+                aria-label="Escribe tu mensaje"
+                placeholder="Pregunta sobre tu investigación..."
+              ></textarea>
+
+              <div class="composer-toolbar">
+
+                <div class="composer-left">
+
+                  <button
+                    class="tool-button"
+                    id="attachButton"
+                    type="button"
+                    title="Adjuntar documento PDF"
+                  >
+                    <i data-lucide="paperclip"></i>
+                    Adjuntar
+                  </button>
+
+                  <input
+                    type="file"
+                    id="fileInput"
+                    accept=".pdf,application/pdf"
+                    hidden
+                  >
+
+                  <span class="composer-divider"></span>
+
+                  <span class="composer-hint">
+                    PDF · máximo 20 MB
+                  </span>
+
+                </div>
+
+                <button
+                  class="send-button"
+                  id="sendButton"
+                  type="submit"
+                  aria-label="Enviar mensaje"
+                  title="Enviar mensaje"
+                >
+                  <i data-lucide="arrow-up"></i>
+                </button>
+
+              </div>
+
+            </form>
+
+            <p class="composer-disclaimer">
+              TesisLive orienta tu investigación. Verifica siempre
+              las sugerencias con tus fuentes y tu asesor académico.
+            </p>
+
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<!-- NOTIFICACIONES -->
+<div
+  class="notification-popover"
+  id="notificationPopover"
+  hidden
+>
+  <strong>Notificaciones</strong>
+  <p>No hay notificaciones nuevas en esta demostración.</p>
+</div>
+
+<!-- MENSAJES EMERGENTES -->
+<div
+  class="toast"
+  id="toast"
+  role="status"
+  aria-live="polite"
+  hidden
+></div>
+
+</body>
+</html>

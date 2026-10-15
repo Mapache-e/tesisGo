@@ -1,0 +1,807 @@
+
+<!DOCTYPE html>
+<html lang="es" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#203824">
+
+  <title>Configuración | TesisLive</title>
+
+  <link rel="icon" href="assets/logo-icono.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="configuracion.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="configuracion.js" defer></script>
+</head>
+
+<body>
+<div class="app-shell">
+
+  <!-- =====================================
+       SIDEBAR
+       ===================================== -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+      <a class="brand" href="dashboard.html" title="TesisLive">
+        <img src="assets/logo-icono.png" alt="">
+        <span class="sidebar-label">
+          Tesis<strong>Live</strong>
+        </span>
+      </a>
+
+      <button
+        class="sidebar-collapse"
+        id="sidebarCollapse"
+        type="button"
+        aria-label="Contraer menú"
+        title="Contraer menú">
+        <i data-lucide="panel-left-close"></i>
+      </button>
+    </div>
+
+    <div class="sidebar-content">
+      <p class="sidebar-caption sidebar-label">
+        ESPACIO DE TRABAJO
+      </p>
+
+      <nav class="sidebar-nav" aria-label="Menú principal">
+
+        <a class="nav-link" href="dashboard.html"
+           data-page="inicio" title="Inicio">
+          <i data-lucide="layout-dashboard"></i>
+          <span class="sidebar-label">Inicio</span>
+        </a>
+
+        <a class="nav-link" href="asesor-ia.html"
+           data-page="asesor-ia" title="Asesor IA">
+          <i data-lucide="bot"></i>
+          <span class="sidebar-label">Asesor IA</span>
+        </a>
+
+        <a class="nav-link" href="proyectos.html"
+           data-page="proyectos" title="Mis proyectos">
+          <i data-lucide="folder-open"></i>
+          <span class="sidebar-label">Mis proyectos</span>
+        </a>
+
+        <a class="nav-link" href="biblioteca.html"
+           data-page="biblioteca" title="Biblioteca">
+          <i data-lucide="library-big"></i>
+          <span class="sidebar-label">Biblioteca</span>
+        </a>
+
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+
+      <a class="nav-link active" href="configuracion.html"
+         data-page="configuracion"
+         aria-current="page" title="Configuración">
+        <i data-lucide="settings"></i>
+        <span class="sidebar-label">Configuración</span>
+      </a>
+
+      <a class="nav-link" href="login.html"
+         id="logoutLink" title="Salir">
+        <i data-lucide="log-out"></i>
+        <span class="sidebar-label">Salir</span>
+      </a>
+
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">D</div>
+        <div class="sidebar-user-info sidebar-label">
+          <strong>Diego</strong>
+          <small>Plan Pro</small>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- =====================================
+       ÁREA PRINCIPAL
+       ===================================== -->
+  <div class="main-area">
+
+    <header class="dashboard-header">
+
+      <div class="header-left">
+        <button
+          class="mobile-menu-button"
+          id="mobileMenu"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <div class="header-breadcrumb">
+          <span>Mi espacio</span>
+          <i data-lucide="chevron-right"></i>
+          <strong>Configuración</strong>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <button
+          class="header-icon-button"
+          id="notificationButton"
+          type="button"
+          aria-label="Notificaciones"
+          aria-expanded="false">
+          <i data-lucide="bell"></i>
+          <span class="notification-dot"></span>
+        </button>
+
+        <div class="header-divider"></div>
+
+        <div class="header-profile">
+          <div class="header-profile-info">
+            <strong>Diego</strong>
+            <span>Estudiante</span>
+          </div>
+          <div class="profile-avatar">D</div>
+        </div>
+      </div>
+
+    </header>
+
+    <main class="settings-main">
+      <div class="settings-container">
+
+        <!-- ENCABEZADO -->
+        <section class="settings-heading">
+          <div class="page-eyebrow">
+            <span class="eyebrow-dot"></span>
+            PERSONALIZA TU EXPERIENCIA
+          </div>
+
+          <h1>Configuración</h1>
+          <p>Administra tu información personal, preferencias y suscripción de TesisLive.</p>
+        </section>
+
+        <!-- =====================================
+             PERFIL
+             ===================================== -->
+        <section class="settings-card" id="profileSection">
+
+          <div class="settings-card-heading">
+            <div class="section-icon">
+              <i data-lucide="user-round"></i>
+            </div>
+
+            <div>
+              <h2>Mi perfil</h2>
+              <p>Información personal y académica de tu cuenta.</p>
+            </div>
+          </div>
+
+          <form id="profileForm">
+            <div class="profile-form-layout">
+
+              <div class="profile-avatar-area">
+                <div class="profile-picture">
+                  <span id="profileInitials">D</span>
+                  <img id="profileImage" alt="Foto de perfil" hidden>
+                </div>
+
+                <label
+                  class="avatar-edit-button"
+                  for="avatarInput"
+                  title="Cambiar fotografía">
+                  <i data-lucide="pencil"></i>
+                </label>
+
+                <input
+                  id="avatarInput"
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  hidden>
+
+                <button
+                  type="button"
+                  class="remove-avatar"
+                  id="removeAvatar"
+                  hidden>
+                  Quitar foto
+                </button>
+              </div>
+
+              <div class="profile-fields">
+
+                <div class="settings-form-grid">
+                  <label class="settings-field">
+                    Nombre
+                    <input type="text" value="Diego"
+                           class="readonly-input"
+                           readonly aria-readonly="true">
+                  </label>
+
+                  <label class="settings-field">
+                    Apellido
+                    <input type="text" value="Ramírez"
+                           class="readonly-input"
+                           readonly aria-readonly="true">
+                  </label>
+                </div>
+
+                <label class="settings-field">
+                  Correo institucional
+                  <input
+                    type="email"
+                    value="diego.ramirez@utp.edu.pe"
+                    class="readonly-input"
+                    readonly aria-readonly="true">
+                </label>
+
+                <label class="settings-field">
+                  Universidad
+                  <input
+                    type="text"
+                    value="Universidad Tecnológica del Perú (UTP)"
+                    class="readonly-input"
+                    readonly aria-readonly="true">
+                </label>
+
+                <label class="settings-field">
+                  Número de teléfono
+                  <input
+                    type="tel"
+                    id="profilePhone"
+                    value="+51 987 654 321"
+                    placeholder="+51 999 999 999"
+                    autocomplete="tel"
+                    maxlength="20"
+                    required>
+                </label>
+
+                <div class="form-actions">
+                  <button
+                    type="submit"
+                    class="settings-primary-button">
+                    <i data-lucide="save"></i>
+                    Guardar cambios
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </form>
+
+        </section>
+
+        <!-- =====================================
+             CONTRASEÑA
+             ===================================== -->
+        <section class="settings-card" id="securitySection">
+
+          <div class="settings-card-heading">
+            <div class="section-icon">
+              <i data-lucide="lock-keyhole"></i>
+            </div>
+
+            <div>
+              <h2>Contraseña y seguridad</h2>
+              <p>Administra la seguridad de tu cuenta.</p>
+            </div>
+          </div>
+
+          <form id="passwordForm" autocomplete="off">
+
+            <label class="settings-field">
+              Contraseña actual
+
+              <span class="password-control">
+                <input
+                  type="password"
+                  id="currentPassword"
+                  placeholder="Introduce tu contraseña actual"
+                  autocomplete="off">
+
+                <button
+                  type="button"
+                  class="password-visibility"
+                  data-target="currentPassword"
+                  aria-label="Mostrar contraseña"
+                  aria-pressed="false">
+                  <i data-lucide="eye"></i>
+                </button>
+              </span>
+            </label>
+
+            <div class="settings-form-grid">
+
+              <label class="settings-field">
+                Nueva contraseña
+
+                <span class="password-control">
+                  <input
+                    type="password"
+                    id="newPassword"
+                    placeholder="Mínimo 8 caracteres"
+                    autocomplete="new-password">
+
+                  <button
+                    type="button"
+                    class="password-visibility"
+                    data-target="newPassword"
+                    aria-label="Mostrar contraseña"
+                    aria-pressed="false">
+                    <i data-lucide="eye"></i>
+                  </button>
+                </span>
+              </label>
+
+              <label class="settings-field">
+                Confirmar nueva contraseña
+
+                <span class="password-control">
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Repite tu contraseña"
+                    autocomplete="new-password">
+
+                  <button
+                    type="button"
+                    class="password-visibility"
+                    data-target="confirmPassword"
+                    aria-label="Mostrar contraseña"
+                    aria-pressed="false">
+                    <i data-lucide="eye"></i>
+                  </button>
+                </span>
+              </label>
+
+            </div>
+
+            <div class="form-actions">
+              <button
+                type="submit"
+                class="settings-secondary-button">
+                <i data-lucide="shield-check"></i>
+                Actualizar contraseña
+              </button>
+            </div>
+
+          </form>
+        </section>
+
+        <!-- =====================================
+             APARIENCIA
+             ===================================== -->
+        <section class="settings-card" id="appearanceSection">
+
+          <div class="settings-card-heading">
+            <div class="section-icon">
+              <i data-lucide="palette"></i>
+            </div>
+
+            <div>
+              <h2>Apariencia</h2>
+              <p>Elige cómo quieres visualizar TesisLive.</p>
+            </div>
+          </div>
+
+          <div class="theme-options"
+               role="radiogroup"
+               aria-label="Tema de apariencia">
+
+            <!-- CLARO -->
+            <label class="theme-option" data-theme-option="light">
+              <input type="radio" name="appearance" value="light">
+
+              <span class="theme-preview theme-preview-light">
+                <span class="preview-sidebar"></span>
+                <span class="preview-window">
+                  <span></span><span></span><span></span>
+                </span>
+              </span>
+
+              <span class="theme-option-bottom">
+                <span>
+                  <strong>Claro</strong>
+                  <small>Apariencia luminosa</small>
+                </span>
+                <i data-lucide="circle"></i>
+              </span>
+            </label>
+
+            <!-- OSCURO -->
+            <label class="theme-option" data-theme-option="dark">
+              <input type="radio" name="appearance" value="dark">
+
+              <span class="theme-preview theme-preview-dark">
+                <span class="preview-sidebar"></span>
+                <span class="preview-window">
+                  <span></span><span></span><span></span>
+                </span>
+              </span>
+
+              <span class="theme-option-bottom">
+                <span>
+                  <strong>Oscuro</strong>
+                  <small>Negro y gris neutro</small>
+                </span>
+                <i data-lucide="circle"></i>
+              </span>
+            </label>
+
+            <!-- SISTEMA -->
+            <label class="theme-option" data-theme-option="system">
+              <input type="radio" name="appearance" value="system" checked>
+
+              <span class="theme-preview theme-preview-system">
+                <span class="preview-sidebar"></span>
+                <span class="preview-window">
+                  <span></span><span></span><span></span>
+                </span>
+              </span>
+
+              <span class="theme-option-bottom">
+                <span>
+                  <strong>Según el sistema</strong>
+                  <small>Adaptación automática</small>
+                </span>
+                <i data-lucide="circle"></i>
+              </span>
+            </label>
+
+          </div>
+        </section>
+
+        <!-- =====================================
+             NOTIFICACIONES
+             ===================================== -->
+        <section class="settings-card" id="notificationsSection">
+
+          <div class="settings-card-heading">
+            <div class="section-icon">
+              <i data-lucide="bell"></i>
+            </div>
+
+            <div>
+              <h2>Notificaciones</h2>
+              <p>Personaliza los avisos que deseas recibir.</p>
+            </div>
+          </div>
+
+          <div class="settings-switch-list">
+
+            <label class="setting-switch-row">
+              <span class="switch-copy">
+                <strong>Revisiones de documentos</strong>
+                <small>Recibe avisos cuando finalice una revisión.</small>
+              </span>
+
+              <span class="switch-control">
+                <input type="checkbox" id="notifyReviews" checked>
+                <span class="switch-track"></span>
+              </span>
+            </label>
+
+            <label class="setting-switch-row">
+              <span class="switch-copy">
+                <strong>Recordatorios de progreso</strong>
+                <small>Mantente al día con las etapas de tus investigaciones.</small>
+              </span>
+
+              <span class="switch-control">
+                <input type="checkbox" id="notifyProgress" checked>
+                <span class="switch-track"></span>
+              </span>
+            </label>
+
+            <label class="setting-switch-row">
+              <span class="switch-copy">
+                <strong>Novedades de TesisLive</strong>
+                <small>Recibe información sobre herramientas y actualizaciones.</small>
+              </span>
+
+              <span class="switch-control">
+                <input type="checkbox" id="notifyNews">
+                <span class="switch-track"></span>
+              </span>
+            </label>
+
+          </div>
+        </section>
+
+        <!-- =====================================
+             SUSCRIPCIÓN
+             ===================================== -->
+        <section class="settings-card" id="subscriptionSection">
+
+          <div class="settings-card-heading">
+            <div class="section-icon">
+              <i data-lucide="credit-card"></i>
+            </div>
+
+            <div>
+              <h2>Mi suscripción</h2>
+              <p>Consulta tu plan y explora otras opciones.</p>
+            </div>
+          </div>
+
+          <div class="subscription-overview">
+
+            <div class="subscription-main">
+              <span class="subscription-label">PLAN ACTUAL</span>
+
+              <div class="subscription-name">
+                <h3>Pro Ilimitado</h3>
+                <i data-lucide="crown"></i>
+              </div>
+
+              <p>
+                Acceso ampliado al asesor académico,
+                biblioteca y herramientas de investigación.
+              </p>
+
+              <strong class="subscription-price">
+                S/ 149<span>/mes</span>
+              </strong>
+            </div>
+
+            <div class="subscription-benefits">
+              <span>BENEFICIOS INCLUIDOS</span>
+
+              <div>
+                <i data-lucide="check-circle-2"></i>
+                Asesor IA
+              </div>
+
+              <div>
+                <i data-lucide="check-circle-2"></i>
+                Biblioteca completa
+              </div>
+
+              <div>
+                <i data-lucide="check-circle-2"></i>
+                Herramientas avanzadas
+              </div>
+            </div>
+
+          </div>
+
+          <div class="subscription-actions">
+            <button
+              type="button"
+              class="settings-primary-button"
+              id="changePlanButton"
+              aria-expanded="false"
+              aria-controls="plansContainer">
+              <i data-lucide="arrow-left-right"></i>
+              Ver otros planes
+            </button>
+          </div>
+
+          <!-- PLANES -->
+          <div class="plans-container" id="plansContainer" hidden>
+
+            <div class="plans-heading">
+              <h3>Explora nuestros planes</h3>
+              <p>Elige la opción que mejor se adapte a tu investigación.</p>
+            </div>
+
+            <div class="plans-grid">
+
+              <!-- ECONÓMICO -->
+              <article class="plan-card">
+                <span class="plan-name">Económico</span>
+
+                <div class="plan-price">
+                  S/ 19 <small>/mes</small>
+                </div>
+
+                <p>
+                  Para comenzar a organizar
+                  tu investigación.
+                </p>
+
+                <button
+                  type="button"
+                  class="settings-secondary-button plan-choice"
+                  data-plan="Económico">
+                  Elegir plan
+                </button>
+              </article>
+
+              <!-- PRO -->
+              <article class="plan-card plan-card-current">
+
+                <span class="current-plan-tag">PLAN ACTUAL</span>
+                <span class="plan-name">Pro Ilimitado</span>
+
+                <div class="plan-price">
+                  S/ 149 <small>/mes</small>
+                </div>
+
+                <p>
+                  Para estudiantes que investigan
+                  de manera constante.
+                </p>
+
+                <button
+                  type="button"
+                  class="settings-primary-button"
+                  disabled>
+                  Tu plan actual
+                </button>
+              </article>
+
+              <!-- CRÉDITOS -->
+              <article class="plan-card">
+
+                <span class="plan-name">Por créditos</span>
+
+                <div class="plan-price">
+                  Desde S/ 8 <small>/crédito</small>
+                </div>
+
+                <p>
+                  Para consultas puntuales
+                  sin una suscripción mensual.
+                </p>
+
+                <div class="credits-warning">
+                  <i data-lucide="info"></i>
+
+                  <span>
+                    Al cambiar al plan por créditos,
+                    perderás tu suscripción actual.
+                  </span>
+                </div>
+
+                <button
+                  type="button"
+                  class="settings-secondary-button plan-choice"
+                  data-plan="Por créditos">
+                  Cambiar a créditos
+                </button>
+
+              </article>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- =====================================
+             INFORMACIÓN LEGAL
+             ===================================== -->
+        <section class="settings-card" id="legalSection">
+
+          <div class="settings-card-heading">
+            <div class="section-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+
+            <div>
+              <h2>Información legal y privacidad</h2>
+              <p>Consulta nuestras políticas y condiciones de uso.</p>
+            </div>
+          </div>
+
+          <div class="legal-links">
+
+            <a href="terminos.html" class="legal-link">
+              <div class="legal-link-icon">
+                <i data-lucide="file-text"></i>
+              </div>
+
+              <div>
+                <strong>Términos y condiciones</strong>
+                <small>Condiciones de uso, planes y responsabilidades.</small>
+              </div>
+
+              <i data-lucide="chevron-right"></i>
+            </a>
+
+            <a href="privacidad.html" class="legal-link">
+              <div class="legal-link-icon">
+                <i data-lucide="shield-check"></i>
+              </div>
+
+              <div>
+                <strong>Política de privacidad</strong>
+                <small>Tratamiento y protección de datos personales.</small>
+              </div>
+
+              <i data-lucide="chevron-right"></i>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- =====================================
+             SOPORTE
+             ===================================== -->
+        <section class="support-card">
+
+          <div class="support-content">
+            <div class="support-icon">
+              <i data-lucide="circle-help"></i>
+            </div>
+
+            <div>
+              <h2>¿Necesitas ayuda?</h2>
+              <p>
+                Comunícate con nuestro equipo
+                de soporte para recibir asistencia.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="mailto:soporte@tesis.go?subject=Consulta%20de%20soporte%20TesisLive"
+            class="settings-secondary-button"
+            id="supportButton">
+            <i data-lucide="mail"></i>
+            Contactar soporte
+          </a>
+
+        </section>
+
+        <footer class="dashboard-footer">
+          <span>TesisLive · Tu investigación, mejor acompañada.</span>
+          <span>© 2026 TesisLive</span>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- NOTIFICACIONES -->
+<div class="notification-popover"
+     id="notificationPopover" hidden>
+  <strong>Notificaciones</strong>
+  <p>No tienes notificaciones nuevas.</p>
+</div>
+
+<!-- CONFIRMACIÓN DE CAMBIO DE PLAN -->
+<div class="plan-modal-backdrop" id="planModal" hidden>
+  <div class="plan-modal" role="dialog"
+       aria-modal="true"
+       aria-labelledby="planModalTitle">
+
+    <div class="plan-modal-icon">
+      <i data-lucide="arrow-left-right"></i>
+    </div>
+
+    <h2 id="planModalTitle">Cambiar de plan</h2>
+    <p id="planModalDescription"></p>
+
+    <div class="plan-modal-actions">
+      <button type="button"
+        class="settings-secondary-button"
+        id="cancelPlanChange">
+        Volver
+      </button>
+
+      <button type="button"
+        class="settings-primary-button"
+        id="confirmPlanChange">
+        Continuar
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- NOTIFICACIÓN DISCRETA -->
+<div class="settings-toast" id="settingsToast"
+     role="status" aria-live="polite" hidden></div>
+
+</body>
+</html>

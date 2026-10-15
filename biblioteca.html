@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html lang="es" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#203824">
+
+  <title>Biblioteca | TesisLive</title>
+
+  <link rel="icon" href="assets/logo-icono.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="biblioteca.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="biblioteca.js" defer></script>
+</head>
+
+<body>
+
+<div class="app-shell">
+
+  <!-- =====================================
+       BARRA LATERAL
+       ===================================== -->
+
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+      <a class="brand" href="dashboard.html" title="TesisLive">
+        <img src="assets/logo-icono.png" alt="">
+        <span class="sidebar-label">
+          Tesis<strong>Live</strong>
+        </span>
+      </a>
+
+      <button
+        class="sidebar-collapse"
+        id="sidebarCollapse"
+        type="button"
+        aria-label="Contraer menú"
+        title="Contraer menú"
+      >
+        <i data-lucide="panel-left-close"></i>
+      </button>
+    </div>
+
+    <div class="sidebar-content">
+
+      <p class="sidebar-caption sidebar-label">
+        ESPACIO DE TRABAJO
+      </p>
+
+      <nav class="sidebar-nav" aria-label="Menú principal">
+
+        <a href="dashboard.html"
+           class="nav-link"
+           data-page="inicio"
+           title="Inicio">
+          <i data-lucide="layout-dashboard"></i>
+          <span class="sidebar-label">Inicio</span>
+        </a>
+
+        <a href="asesor-ia.html"
+           class="nav-link"
+           data-page="asesor-ia"
+           title="Asesor IA">
+          <i data-lucide="bot"></i>
+          <span class="sidebar-label">Asesor IA</span>
+        </a>
+
+        <a href="proyectos.html"
+           class="nav-link"
+           data-page="proyectos"
+           title="Mis proyectos">
+          <i data-lucide="folder-open"></i>
+          <span class="sidebar-label">Mis proyectos</span>
+        </a>
+
+        <a href="biblioteca.html"
+           class="nav-link active"
+           data-page="biblioteca"
+           aria-current="page"
+           title="Biblioteca">
+          <i data-lucide="library-big"></i>
+          <span class="sidebar-label">Biblioteca</span>
+        </a>
+
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+
+      <a href="configuracion.html"
+         class="nav-link"
+         data-page="configuracion"
+         title="Configuración">
+        <i data-lucide="settings"></i>
+        <span class="sidebar-label">Configuración</span>
+      </a>
+
+      <a href="login.html"
+         class="nav-link"
+         id="logoutLink"
+         title="Salir">
+        <i data-lucide="log-out"></i>
+        <span class="sidebar-label">Salir</span>
+      </a>
+
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">D</div>
+
+        <div class="sidebar-user-info sidebar-label">
+          <strong>Diego</strong>
+          <small>Plan Pro</small>
+        </div>
+      </div>
+
+    </div>
+
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- =====================================
+       ÁREA PRINCIPAL
+       ===================================== -->
+
+  <div class="main-area">
+
+    <!-- HEADER COMPARTIDO -->
+    <header class="dashboard-header">
+
+      <div class="header-left">
+
+        <button
+          class="mobile-menu-button"
+          id="mobileMenu"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+
+        <div class="header-breadcrumb">
+          <span>Mi espacio</span>
+          <i data-lucide="chevron-right"></i>
+          <strong>Biblioteca</strong>
+        </div>
+      </div>
+
+      <div class="header-right">
+
+        <button
+          class="header-icon-button"
+          id="notificationButton"
+          type="button"
+          aria-label="Notificaciones"
+          aria-expanded="false"
+        >
+          <i data-lucide="bell"></i>
+          <span class="notification-dot"></span>
+        </button>
+
+        <div class="header-divider"></div>
+
+        <div class="header-profile">
+          <div class="header-profile-info">
+            <strong>Diego</strong>
+            <span>Estudiante</span>
+          </div>
+
+          <div class="profile-avatar">D</div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- BIBLIOTECA -->
+    <main class="library-main">
+
+      <div class="library-container">
+
+        <!-- PRESENTACIÓN -->
+        <section class="library-heading">
+
+          <div class="library-intro">
+
+            <div class="page-eyebrow">
+              <span class="eyebrow-dot"></span>
+              TU ESPACIO DE CONOCIMIENTO
+            </div>
+
+            <h1>Biblioteca académica</h1>
+
+            <p>
+              Descubre investigaciones, consulta antecedentes
+              y encuentra recursos que te ayuden a desarrollar
+              tu trabajo académico.
+            </p>
+
+          </div>
+
+          <div class="library-heading-symbol" aria-hidden="true">
+            <i data-lucide="library-big"></i>
+          </div>
+
+        </section>
+
+        <!-- BUSCADOR -->
+        <section class="library-search-section"
+          aria-label="Buscar en biblioteca">
+
+          <div class="library-search">
+            <i data-lucide="search"></i>
+
+            <input
+              id="librarySearch"
+              type="search"
+              placeholder="Buscar por título, autor, tema o palabra clave..."
+              aria-label="Buscar recursos académicos"
+            >
+
+            <button
+              type="button"
+              id="clearSearch"
+              class="search-clear"
+              title="Limpiar búsqueda"
+              aria-label="Limpiar búsqueda"
+              hidden
+            >
+              <i data-lucide="x"></i>
+            </button>
+          </div>
+
+          <button
+            id="toggleFilters"
+            class="filter-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="advancedFilters"
+          >
+            <i data-lucide="sliders-horizontal"></i>
+            Filtros
+          </button>
+
+        </section>
+
+        <!-- FILTROS AVANZADOS -->
+        <section class="advanced-filters"
+          id="advancedFilters"
+          aria-label="Filtros avanzados"
+          hidden>
+
+          <div class="filter-heading">
+            <div>
+              <strong>Filtros avanzados</strong>
+              <p>Encuentra materiales más específicos.</p>
+            </div>
+
+            <button type="button" id="clearFilters"
+              class="filter-reset">
+              Restablecer
+            </button>
+          </div>
+
+          <div class="filters-grid">
+
+            <label class="filter-field">
+              Tipo de publicación
+              <select id="filterType">
+                <option value="todos">Todos los tipos</option>
+                <option value="tesis">Tesis</option>
+                <option value="articulo">Artículo científico</option>
+                <option value="paper">Paper</option>
+                <option value="guia">Guía metodológica</option>
+                <option value="plantilla">Plantilla</option>
+                <option value="norma">Normas y citación</option>
+              </select>
+            </label>
+
+            <label class="filter-field">
+              Año
+              <select id="filterYear">
+                <option value="todos">Todos los años</option>
+              </select>
+            </label>
+
+            <label class="filter-field">
+              Institución
+              <select id="filterInstitution">
+                <option value="todos">Todas las instituciones</option>
+              </select>
+            </label>
+
+            <label class="filter-field">
+              Formato
+              <select id="filterFormat">
+                <option value="todos">Todos los formatos</option>
+                <option value="PDF">PDF</option>
+                <option value="DOCX">DOCX</option>
+                <option value="ENLACE">Enlace</option>
+              </select>
+            </label>
+
+          </div>
+        </section>
+
+        <!-- PESTAÑAS PRINCIPALES -->
+        <div class="library-tabs" role="tablist"
+          aria-label="Secciones de biblioteca">
+
+          <button class="library-tab active"
+            id="tab-investigaciones"
+            type="button"
+            data-tab="investigaciones"
+            role="tab"
+            aria-selected="true"
+            aria-controls="libraryResults">
+            <i data-lucide="graduation-cap"></i>
+            Investigaciones
+          </button>
+
+          <button class="library-tab"
+            id="tab-recursos"
+            type="button"
+            data-tab="recursos"
+            role="tab"
+            aria-selected="false"
+            aria-controls="libraryResults">
+            <i data-lucide="book-open"></i>
+            Recursos
+          </button>
+
+          <button class="library-tab"
+            id="tab-guardados"
+            type="button"
+            data-tab="guardados"
+            role="tab"
+            aria-selected="false"
+            aria-controls="libraryResults">
+            <i data-lucide="bookmark"></i>
+            Guardados
+            <span id="savedCount" class="saved-count">0</span>
+          </button>
+
+        </div>
+
+        <!-- CONTENIDO -->
+        <section class="library-results-section"
+          id="libraryResults"
+          role="tabpanel"
+          aria-labelledby="tab-investigaciones">
+
+          <div class="results-heading">
+
+            <div>
+              <h2 id="resultsTitle">Investigaciones académicas</h2>
+              <p id="resultsDescription">
+                Explora antecedentes para tu investigación.
+              </p>
+            </div>
+
+            <div class="results-controls">
+              <span id="resultsCount" aria-live="polite">
+                0 resultados
+              </span>
+
+              
+<div class="sort-dropdown" id="sortDropdown">
+
+  <button
+    type="button"
+    class="sort-trigger"
+    id="sortTrigger"
+    aria-label="Ordenar resultados"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-controls="sortMenu"
+  >
+    <span id="sortSelected">Más recientes</span>
+    <i data-lucide="chevron-down"></i>
+  </button>
+
+  <div
+    class="sort-menu"
+    id="sortMenu"
+    role="listbox"
+    aria-label="Ordenar resultados"
+    tabindex="-1"
+    hidden
+  >
+    <button type="button" role="option"
+      class="sort-option active"
+      data-value="recientes" aria-selected="true">
+      Más recientes
+      <i data-lucide="check"></i>
+    </button>
+
+    <button type="button" role="option"
+      class="sort-option"
+      data-value="antiguos" aria-selected="false">
+      Más antiguos
+      <i data-lucide="check"></i>
+    </button>
+
+    <button type="button" role="option"
+      class="sort-option"
+      data-value="az" aria-selected="false">
+      Título A-Z
+      <i data-lucide="check"></i>
+    </button>
+
+    <button type="button" role="option"
+      class="sort-option"
+      data-value="za" aria-selected="false">
+      Título Z-A
+      <i data-lucide="check"></i>
+    </button>
+  </div>
+
+  <!-- Mantiene compatibilidad con el JS original -->
+  <input type="hidden" id="sortResults" value="recientes">
+
+</div>
+
+            </div>
+
+          </div>
+
+          <div id="libraryList" class="library-list">
+            <!-- Tarjetas creadas por JavaScript -->
+          </div>
+
+          <div class="library-empty" id="libraryEmpty" hidden>
+            <div class="empty-icon">
+              <i data-lucide="search-x"></i>
+            </div>
+            <h3 id="emptyTitle">No encontramos resultados</h3>
+            <p id="emptyDescription">
+              Prueba con otras palabras o cambia los filtros.
+            </p>
+
+            <button class="secondary-button"
+              type="button" id="emptyReset">
+              Limpiar filtros
+            </button>
+          </div>
+
+        </section>
+
+        <!-- NOTA -->
+        <div class="library-source-note">
+          <i data-lucide="info"></i>
+          <p>
+            Los registros mostrados son demostrativos.
+            Las investigaciones reales deberán incluir
+            fuentes y metadatos verificables antes de
+            utilizarse como referencias académicas.
+          </p>
+        </div>
+
+        <footer class="dashboard-footer">
+          <span>TesisLive · Tu investigación, mejor acompañada.</span>
+          <span>© 2026 TesisLive</span>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- =====================================
+     FICHA DETALLADA
+     ===================================== -->
+
+<div class="library-modal-backdrop"
+  id="resourceModal"
+  hidden>
+
+  <div class="library-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="resourceModalTitle">
+
+    <div class="modal-top">
+
+      <div class="modal-top-left">
+        <span class="modal-resource-label" id="modalResourceType">
+          INVESTIGACIÓN
+        </span>
+
+        <span class="demo-label">Ejemplo</span>
+      </div>
+
+      <button type="button"
+        class="modal-close"
+        id="closeResourceModal"
+        aria-label="Cerrar ficha">
+        <i data-lucide="x"></i>
+      </button>
+
+    </div>
+
+    <h2 id="resourceModalTitle"></h2>
+
+    <p class="modal-resource-description"
+      id="modalResourceDescription"></p>
+
+    <div class="resource-metadata" id="resourceMetadata">
+      <!-- Metadatos del recurso -->
+    </div>
+
+    <div class="modal-keywords">
+      <strong>Palabras clave</strong>
+      <div id="modalKeywords" class="keyword-list"></div>
+    </div>
+
+    <!-- REFERENCIAS -->
+    <section class="citation-section" id="citationSection">
+
+      <div class="citation-heading">
+        <div>
+          <span class="card-eyebrow">REFERENCIAS ACADÉMICAS</span>
+          <h3>Cómo citar esta investigación</h3>
+        </div>
+
+        <span class="citation-style">APA 7</span>
+      </div>
+
+      <p class="citation-warning">
+        Referencia ilustrativa. No la utilices en un trabajo
+        académico sin comprobar los datos en la fuente original.
+      </p>
+
+      <div class="citation-box">
+        <p id="citationText"></p>
+      </div>
+
+      <div class="citation-inline">
+        <span>Cita dentro del texto</span>
+        <strong id="inlineCitation"></strong>
+      </div>
+
+      <button class="secondary-button"
+        type="button" id="copyCitation">
+        <i data-lucide="copy"></i>
+        Copiar referencia de ejemplo
+      </button>
+
+    </section>
+
+    <div class="modal-bottom">
+
+      <button type="button"
+        class="secondary-button"
+        id="modalFavorite">
+        <i data-lucide="bookmark"></i>
+        Guardar
+      </button>
+
+      <button type="button"
+        class="primary-button"
+        id="openResource">
+        <i data-lucide="external-link"></i>
+        Abrir fuente
+      </button>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- NOTIFICACIONES -->
+<div class="notification-popover"
+  id="notificationPopover" hidden>
+  <strong>Notificaciones</strong>
+  <p>No hay notificaciones nuevas en esta demostración.</p>
+</div>
+
+<!-- MENSAJES -->
+<div class="library-toast"
+  id="libraryToast"
+  role="status"
+  aria-live="polite"
+  hidden></div>
+
+</body>
+</html>

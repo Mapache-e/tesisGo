@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="es" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#203824">
+  <title>Inicio | TesisLive</title>
+
+  <link rel="icon" href="assets/logo-icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="dashboard.js" defer></script>
+</head>
+
+<body>
+<div class="app-shell">
+
+  <!-- BARRA LATERAL -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+      <a class="brand" href="dashboard.html" title="TesisLive">
+        <img src="assets/logo-icono.png" alt="">
+        <span class="sidebar-label">Tesis<strong>Live</strong></span>
+      </a>
+
+      <button
+        class="sidebar-collapse"
+        id="sidebarCollapse"
+        type="button"
+        aria-label="Contraer menú"
+        title="Contraer menú"
+      >
+        <i data-lucide="panel-left-close"></i>
+      </button>
+    </div>
+
+    <div class="sidebar-content">
+      <p class="sidebar-caption sidebar-label">
+        ESPACIO DE TRABAJO
+      </p>
+
+      <nav class="sidebar-nav" aria-label="Menú principal">
+
+        <a class="nav-link" href="dashboard.html"
+          data-page="inicio" title="Inicio">
+          <i data-lucide="layout-dashboard"></i>
+          <span class="sidebar-label">Inicio</span>
+        </a>
+
+        <a class="nav-link" href="asesor-ia.html"
+          data-page="asesor-ia" title="Asesor IA">
+          <i data-lucide="bot"></i>
+          <span class="sidebar-label">Asesor IA</span>
+        </a>
+
+        <a class="nav-link" href="proyectos.html"
+          data-page="proyectos" title="Mis proyectos">
+          <i data-lucide="folder-open"></i>
+          <span class="sidebar-label">Mis proyectos</span>
+        </a>
+
+        <a class="nav-link" href="biblioteca.html"
+          data-page="biblioteca" title="Biblioteca">
+          <i data-lucide="library-big"></i>
+          <span class="sidebar-label">Biblioteca</span>
+        </a>
+
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+
+      <a class="nav-link" href="configuracion.html"
+        data-page="configuracion" title="Configuración">
+        <i data-lucide="settings"></i>
+        <span class="sidebar-label">Configuración</span>
+      </a>
+
+      <a class="nav-link" href="login.html"
+        id="logoutLink" title="Salir">
+        <i data-lucide="log-out"></i>
+        <span class="sidebar-label">Salir</span>
+      </a>
+
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">D</div>
+        <div class="sidebar-user-info sidebar-label">
+          <strong>Diego</strong>
+          <small>Plan Pro</small>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="main-area">
+
+    <!-- HEADER -->
+    <header class="dashboard-header">
+
+      <div class="header-left">
+        <button class="mobile-menu-button"
+          id="mobileMenu" type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <div class="header-breadcrumb">
+          <span>Mi espacio</span>
+          <i data-lucide="chevron-right"></i>
+          <strong>Inicio</strong>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <button class="header-icon-button"
+          id="notificationButton"
+          type="button"
+          aria-label="Notificaciones"
+          aria-expanded="false">
+          <i data-lucide="bell"></i>
+          <span class="notification-dot"></span>
+        </button>
+
+        <div class="header-divider"></div>
+
+        <div class="header-profile">
+          <div class="header-profile-info">
+            <strong>Diego</strong>
+            <span>Estudiante</span>
+          </div>
+          <div class="profile-avatar">D</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DASHBOARD -->
+    <main class="dashboard-main">
+      <div class="dashboard-container">
+
+        <!-- SALUDO -->
+        <section class="welcome-section">
+          <div>
+            <div class="page-eyebrow">
+              <span class="eyebrow-dot"></span>
+              MI ESPACIO DE INVESTIGACIÓN
+            </div>
+
+            <h1>
+              Bienvenido de nuevo, <span>Diego.</span>
+            </h1>
+
+            <p>
+              Cada pequeño avance te acerca a tu meta.
+              Continúa donde dejaste tu investigación.
+            </p>
+          </div>
+
+          <div class="welcome-date">
+            <i data-lucide="calendar-days"></i>
+            <span id="currentDate">Hoy</span>
+          </div>
+        </section>
+
+        <!-- ESTADÍSTICAS -->
+        <section class="stats-grid" aria-label="Resumen de actividad">
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">
+                <i data-lucide="folder-open"></i>
+              </span>
+              <span class="stat-caption">PROYECTOS</span>
+            </div>
+            <strong class="stat-value" id="statProjects">3</strong>
+            <p>Proyectos activos</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">
+                <i data-lucide="bookmark"></i>
+              </span>
+              <span class="stat-caption">BIBLIOTECA</span>
+            </div>
+            <strong class="stat-value" id="statSaved">18</strong>
+            <p>Recursos guardados</p>
+          </article>
+
+          <article class="stat-card stat-card-featured">
+            <div class="stat-top">
+              <span class="stat-icon">
+                <i data-lucide="wallet"></i>
+              </span>
+              <span class="stat-caption">MI SALDO</span>
+            </div>
+            <strong class="stat-value" id="statCredits">12</strong>
+            <p>Créditos disponibles</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">
+                <i data-lucide="clock-3"></i>
+              </span>
+              <span class="stat-caption">ACTIVIDAD</span>
+            </div>
+            <strong class="stat-value" id="statHours">5h 30m</strong>
+            <p>Tiempo esta semana</p>
+          </article>
+
+        </section>
+
+        <!-- ASESOR IA -->
+        <section class="advisor-banner">
+          <div class="advisor-banner-content">
+
+            <div class="advisor-eyebrow">
+              <i data-lucide="sparkles"></i>
+              TU ASESOR ACADÉMICO
+            </div>
+
+            <h2>¿En qué vamos a trabajar hoy?</h2>
+
+            <p>
+              Resuelve tus dudas, revisa un documento o recibe
+              orientación para continuar tu investigación.
+            </p>
+
+            <a class="advisor-button" href="asesor-ia.html">
+              <i data-lucide="message-circle"></i>
+              Abrir asesor IA
+            </a>
+          </div>
+
+          <div class="advisor-banner-art" aria-hidden="true">
+            <div class="advisor-art-ring"></div>
+            <div class="advisor-art-card">
+              <div class="advisor-art-heading">
+                <img src="assets/logo-icono.png" alt="">
+                <strong>TesisLive</strong>
+              </div>
+              <span class="art-line"></span>
+              <span class="art-line short"></span>
+              <p>Tu siguiente paso está más cerca.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROYECTO E HISTORIAL -->
+        <section class="workspace-grid">
+
+          <article class="workspace-card">
+
+            <div class="card-heading">
+              <div>
+                <span class="card-eyebrow">TU INVESTIGACIÓN</span>
+                <h2>Continúa tu proyecto</h2>
+              </div>
+              <span class="card-icon">
+                <i data-lucide="chart-no-axes-column"></i>
+              </span>
+            </div>
+
+            <div class="project-content">
+              <div
+                class="progress-circle"
+                id="progressCircle"
+                role="progressbar"
+                aria-label="Avance del proyecto"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="50"
+              >
+                <div class="progress-inner">
+                  <strong id="progressNumber">50%</strong>
+                  <small>completado</small>
+                </div>
+              </div>
+
+              <div class="project-details">
+                <span class="project-status">● EN DESARROLLO</span>
+
+                <h3 id="projectTitle">
+                  Marketing digital en PYMES
+                </h3>
+
+                <p>
+                  Continúa con el desarrollo de tu investigación
+                  desde el último apartado trabajado.
+                </p>
+
+                <div class="project-tags">
+                  <span>Marco teórico</span>
+                  <span>Tesis</span>
+                </div>
+
+                <a class="continue-button"
+                  href="proyectos.html?tab=documentos">
+                  Continuar
+                  <i data-lucide="chevron-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <i data-lucide="info"></i>
+              El avance se calcula según las etapas completadas.
+            </div>
+
+          </article>
+
+          <article class="workspace-card">
+
+            <div class="card-heading">
+              <div>
+                <span class="card-eyebrow">ACTIVIDAD RECIENTE</span>
+                <h2>Historial de cambios</h2>
+              </div>
+              <span class="card-icon">
+                <i data-lucide="history"></i>
+              </span>
+            </div>
+
+            <div class="history-list">
+
+              <div class="history-item">
+                <span class="history-dot"></span>
+                <div>
+                  <strong>Marco teórico actualizado</strong>
+                  <p>Marketing digital en PYMES</p>
+                </div>
+                <time datetime="2026-10-14">14 oct.</time>
+              </div>
+
+              <div class="history-item">
+                <span class="history-dot"></span>
+                <div>
+                  <strong>Metodología revisada</strong>
+                  <p>Impacto de IA en la educación</p>
+                </div>
+                <time datetime="2026-10-12">12 oct.</time>
+              </div>
+
+              <div class="history-item">
+                <span class="history-dot"></span>
+                <div>
+                  <strong>Objetivos modificados</strong>
+                  <p>Estrategias de branding personal</p>
+                </div>
+                <time datetime="2026-10-10">10 oct.</time>
+              </div>
+
+              <div class="history-item">
+                <span class="history-dot"></span>
+                <div>
+                  <strong>Introducción actualizada</strong>
+                  <p>Marketing digital en PYMES</p>
+                </div>
+                <time datetime="2026-10-08">8 oct.</time>
+              </div>
+
+            </div>
+
+            <div class="card-footer">
+              <i data-lucide="file-clock"></i>
+              Aquí aparecerán tus últimas modificaciones.
+            </div>
+
+          </article>
+
+        </section>
+
+        <footer class="dashboard-footer">
+          <span>TesisLive · Tu investigación, mejor acompañada.</span>
+          <span>© 2026 TesisLive</span>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- NOTIFICACIONES -->
+<div class="notification-popover"
+  id="notificationPopover"
+  hidden>
+  <strong>Notificaciones</strong>
+  <p>No hay notificaciones nuevas en esta demostración.</p>
+</div>
+
+</body>
+</html>

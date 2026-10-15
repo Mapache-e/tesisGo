@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TesisLive | Tu investigación, mejor acompañada</title>
+  <meta name="description" content="TesisLive te ayuda a revisar avances, entender errores y mejorar tu investigación con orientación académica apoyada por IA.">
+  <link rel="icon" href="assets/logo-icono.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#inicio" class="brand">
+        <img src="assets/logo-icono.png" alt="Logo de TesisLive">
+        <span>Tesis<span class="brand-accent">Live</span></span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#herramientas">Herramientas</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#planes">Planes</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="login-link">Ingresar</a>
+        <a href="register.html" class="btn btn-dark">Empezar gratis <span>↗</span></a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" hidden>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#planes">Planes</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="login.html">Ingresar</a>
+      <a href="register.html">Empezar gratis ↗</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-glow hero-glow-left"></div>
+      <div class="hero-glow hero-glow-right"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            TU COMPAÑERO DE INVESTIGACIÓN
+          </div>
+
+          <h1>
+            Tu próxima gran idea<br>
+            merece una<br>
+            <span>mejor guía.</span>
+          </h1>
+
+          <p class="hero-text">
+            No tienes que resolverlo todo a solas. Revisa tus avances,
+            entiende tus errores y encuentra el siguiente paso en tu
+            tesis o trabajo académico.
+          </p>
+
+          <div class="hero-actions">
+            <a href="register.html" class="btn btn-primary">Probar gratis 7 días <span>↗</span></a>
+            <a href="#como-funciona" class="btn btn-outline"><span class="play-icon">▶</span> Ver cómo funciona</a>
+          </div>
+
+          <div class="hero-proof">
+            <div class="hero-proof-icon">✓</div>
+            <div>
+              <strong>Una IA que te orienta, no que hace tu trabajo.</strong>
+              <p>Aprende a investigar con confianza y autonomía.</p>
+            </div>
+          </div>
+
+          <div class="hero-bottom-line">
+            <span>MENOS DUDAS. MÁS CLARIDAD.</span>
+            <div></div>
+            <span>APRENDE · REVISA · AVANZA</span>
+          </div>
+        </div>
+
+        <div class="hero-preview reveal">
+          <div class="preview-rings"></div>
+
+          <div class="floating-tag floating-top">
+            <span>✓</span> Tu progreso importa
+          </div>
+
+          <div class="preview-card">
+            <div class="preview-head">
+              <div class="preview-brand">
+                <img src="assets/logo-icono.png" alt="">
+                <strong>Tesis<span>Live</span></strong>
+                <small>/ Asesor académico</small>
+              </div>
+              <div class="preview-dots">
+                <i></i><i></i><i></i>
+              </div>
+            </div>
+
+            <div class="preview-body">
+              <div class="preview-title-row">
+                <h3>Revisión de documento</h3>
+                <span class="preview-example">• Vista de ejemplo</span>
+              </div>
+
+              <div class="document-card">
+                <div class="document-icon">▤</div>
+                <div class="document-meta">
+                  <strong>Mi_primer_avance.pdf</strong>
+                  <small>20 páginas · Documento de investigación</small>
+                </div>
+                <div class="document-menu">···</div>
+              </div>
+
+              <div class="issues-head">
+                <strong>Puntos para mejorar</strong>
+                <span>3 observaciones</span>
+              </div>
+
+              <div class="issue-row">
+                <span class="issue-index issue-yellow">01</span>
+                <div class="issue-copy">
+                  <strong>Delimita tu objetivo</strong>
+                  <p>Página 4 · Especifica la población que estudiarás.</p>
+                </div>
+                <span class="issue-arrow">↗</span>
+              </div>
+
+              <div class="issue-row">
+                <span class="issue-index issue-green">02</span>
+                <div class="issue-copy">
+                  <strong>Conecta problema y objetivos</strong>
+                  <p>Página 7 · Revisa la coherencia entre ambos.</p>
+                </div>
+                <span class="issue-arrow">↗</span>
+              </div>
+
+              <div class="issue-row">
+                <span class="issue-index issue-blue">03</span>
+                <div class="issue-copy">
+                  <strong>Fortalece tus fuentes</strong>
+                  <p>Página 12 · Sustenta tus afirmaciones con evidencia.</p>
+                </div>
+                <span class="issue-arrow">↗</span>
+              </div>
+
+              <div class="advisor-tip">
+                <span>✦</span>
+                <p><strong>Vas por buen camino.</strong> Te explico qué mejorar y por qué, para que tú decidas cómo hacerlo.</p>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="universities reveal">
+      <div class="container">
+        <p class="universities-title">Usado por estudiantes de universidades como</p>
+      </div>
+
+      <div class="universities-mask">
+        <div class="universities-track" id="universities-track">
+          <div class="universities-set">
+            <a href="https://www.utp.edu.pe/" target="_blank" rel="noopener noreferrer" aria-label="UTP">
+              <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Utplogonuevo.svg/960px-Utplogonuevo.svg.png" alt="UTP">
+            </a>
+
+            <a href="https://www.upn.edu.pe/" target="_blank" rel="noopener noreferrer" aria-label="UPN">
+              <img src="https://d30mzt1bxg5llt.cloudfront.net/public/uploads/images/LOGOTIPO_PRINCIPAL_NEGATIVO_B-N_CMYK.png" alt="UPN">
+            </a>
+
+            <a href="https://www.ucv.edu.pe/" target="_blank" rel="noopener noreferrer" aria-label="Universidad César Vallejo">
+              <img src="https://images.seeklogo.com/logo-png/17/2/universidad-cesar-vallejo-logo-png_seeklogo-179378.png" alt="Universidad César Vallejo">
+            </a>
+
+            <a href="https://uwiener.edu.pe/" target="_blank" rel="noopener noreferrer" aria-label="Universidad Norbert Wiener">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Logo_Universidad_Norbert_Wiener_Powered_by_ASU.png" alt="Universidad Norbert Wiener">
+            </a>
+
+            <a href="https://www.ulima.edu.pe/" target="_blank" rel="noopener noreferrer" aria-label="Universidad de Lima">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Universidad_de_Lima_logo.png" alt="Universidad de Lima">
+            </a>
+
+            <a href="https://unmsm.edu.pe/" target="_blank" rel="noopener noreferrer" aria-label="UNMSM">
+              <img src="https://secgen.unmsm.edu.pe/wp-content/uploads/2026/04/unmsm.png" alt="UNMSM">
+            </a>
+
+            <a href="https://www.uni.edu.pe/" target="_blank" rel="noopener noreferrer" aria-label="UNI">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Uni-logo_transparente_granate.png" alt="UNI">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section steps" id="como-funciona">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="section-kicker">ASÍ DE SENCILLO</span>
+          <h2>Investigar no tiene por qué sentirse <span>complicado.</span></h2>
+          <p>En tres pasos, pasas de no saber por dónde seguir a tener un camino mucho más claro.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <div class="step-top"><span>01 /</span><span>↥</span></div>
+            <div class="step-visual step-upload">
+              <div class="fake-file">
+                <span class="pdf-badge">PDF</span>
+                <div>
+                  <strong>Tu avance</strong>
+                  <i></i><i></i><i></i>
+                </div>
+              </div>
+              <small>+ Subir documento</small>
+            </div>
+            <h3>Comparte tu avance</h3>
+            <p>Sube tu documento o plantea tu duda académica en lenguaje sencillo.</p>
+          </article>
+
+          <article class="step-card reveal">
+            <div class="step-top"><span>02 /</span><span>✦</span></div>
+            <div class="step-visual step-review">
+              <div class="review-sheet">
+                <i></i><i></i><i class="highlight"></i><i></i><i class="highlight"></i>
+              </div>
+              <small>Observación encontrada ✓</small>
+            </div>
+            <h3>Entiende qué mejorar</h3>
+            <p>Recibe observaciones claras sobre estructura, metodología y coherencia.</p>
+          </article>
+
+          <article class="step-card reveal">
+            <div class="step-top"><span>03 /</span><span>↗</span></div>
+            <div class="step-visual step-progress">
+              <div class="progress-box">
+                <span>Tu progreso</span>
+                <strong>Un paso más cerca</strong>
+                <div class="progress-bar"><b></b></div>
+                <small>✓ Revisado · → Siguiente paso</small>
+              </div>
+            </div>
+            <h3>Avanza con claridad</h3>
+            <p>Aplica las sugerencias y sigue construyendo tu investigación con seguridad.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features" id="herramientas">
+      <div class="container">
+        <div class="features-top reveal">
+          <div>
+            <span class="section-kicker">HECHO PARA INVESTIGADORES REALES</span>
+            <h2>Todo lo que necesitas.<br><span>Sin complicarte.</span></h2>
+          </div>
+          <p>Un espacio donde tus dudas, tus documentos y tus recursos trabajan juntos.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-highlight reveal">
+            <span class="feature-tag">✦ LA HERRAMIENTA ESTRELLA</span>
+            <h3>Una segunda mirada para tu investigación.</h3>
+            <p>
+              Pregunta lo que no entiendas y revisa tus textos con observaciones
+              que te ayuden a pensar mejor, sin reemplazar tu esfuerzo.
+            </p>
+
+            <div class="demo-chat">
+              <div class="demo-user">¿Mi objetivo de investigación está bien planteado?</div>
+              <div class="demo-ai">
+                <span>✦</span>
+                <div>
+                  Podemos revisarlo juntos. Primero, verifiquemos si tu objetivo
+                  indica <strong>qué estudiarás, con quiénes y para qué</strong>.
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="feature-side">
+            <article class="feature-small reveal">
+              <div class="feature-icon feature-lavender">▤</div>
+              <h3>Tu biblioteca, a mano.</h3>
+              <p>Accede a guías, plantillas y recursos metodológicos cuando los necesites.</p>
+            </article>
+
+            <article class="feature-small reveal">
+              <div class="feature-icon feature-peach">▥</div>
+              <h3>Todo tu avance, en orden.</h3>
+              <p>Organiza documentos y visualiza tu progreso sin perderte en el proceso.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mission" id="beneficios">
+      <div class="container mission-grid">
+        <div class="mission-visual reveal">
+          <div class="mission-ring"></div>
+          <div class="mission-logo">
+            <img src="assets/logo-icono.png" alt="Logo TesisLive">
+          </div>
+          <div class="mission-note">
+            Tu capacidad de investigar<br>
+            <strong>es lo más importante.</strong>
+          </div>
+        </div>
+
+        <div class="mission-copy reveal">
+          <span class="section-kicker">NUESTRA FORMA DE ENTENDER LA IA</span>
+          <h2>No escribimos tu tesis.<br><span>Te ayudamos a avanzar.</span></h2>
+          <p>
+            La investigación tiene valor porque las ideas son tuyas.
+            TesisLive te acompaña cuando algo no está claro, explicándote
+            cómo mejorar para que tomes mejores decisiones.
+          </p>
+
+          <div class="mission-list">
+            <div>
+              <span>✓</span>
+              <div>
+                <strong>Orientación, no sustitución</strong>
+                <small>Tu criterio y tu trabajo van primero.</small>
+              </div>
+            </div>
+            <div>
+              <span>✓</span>
+              <div>
+                <strong>Recomendaciones comprensibles</strong>
+                <small>Explicaciones claras y fáciles de aplicar.</small>
+              </div>
+            </div>
+            <div>
+              <span>✓</span>
+              <div>
+                <strong>A tu ritmo y en tu etapa</strong>
+                <small>Desde tu primera idea hasta tu último avance.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="planes">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="section-kicker">PLANES PARA CADA INVESTIGADOR</span>
+          <h2>Elige cómo quieres <span>avanzar.</span></h2>
+          <p>Opciones flexibles para acompañarte durante tu investigación.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <div class="price-icon">◇</div>
+            <h3>Económico</h3>
+            <p class="price-desc">Para empezar a ordenar tu investigación.</p>
+            <div class="price-amount">S/ 19 <span>/ mes</span></div>
+            <div class="price-divider"></div>
+            <ul class="price-list">
+              <li>50 consultas al asesor IA al mes</li>
+              <li>Acceso a biblioteca básica</li>
+              <li>Plantillas esenciales</li>
+              <li>Historial de consultas</li>
+            </ul>
+            <a href="register.html" class="btn btn-outline full">Elegir Económico ↗</a>
+          </article>
+
+          <article class="price-card featured reveal">
+            <div class="price-badge">✦ 7 DÍAS GRATIS</div>
+            <div class="price-icon">✦</div>
+            <h3>TesisLive Pro</h3>
+            <p class="price-desc">Para quienes quieren llevar su investigación más lejos.</p>
+            <div class="price-amount">S/ 149 <span>/ mes</span></div>
+            <div class="price-divider"></div>
+            <ul class="price-list">
+              <li>Consultas al asesor IA con política de uso justo</li>
+              <li>Análisis avanzado de documentos PDF</li>
+              <li>Acceso a biblioteca completa</li>
+              <li>Seguimiento de proyectos y avances</li>
+              <li>Orientación académica personalizada</li>
+            </ul>
+            <a href="register.html" class="btn btn-primary full">Probar Pro gratis 7 días ↗</a>
+            <p class="price-note">Después de la prueba, S/ 149 al mes.</p>
+          </article>
+
+          <article class="price-card reveal">
+            <div class="price-icon">◈</div>
+            <h3>Por créditos</h3>
+            <p class="price-desc">Ideal para consultas puntuales y sin suscripción mensual.</p>
+            <div class="price-amount">Desde S/ 8 <span>/ crédito</span></div>
+            <div class="price-divider"></div>
+            <ul class="price-list">
+              <li>Paquete de 10 créditos — S/ 78</li>
+              <li>Paquete de 30 créditos — S/ 210</li>
+              <li>1 crédito = 1 consulta avanzada</li>
+              <li>Sin permanencia mensual</li>
+            </ul>
+            <a href="register.html" class="btn btn-outline full">Comprar créditos ↗</a>
+          </article>
+        </div>
+
+        <p class="pricing-foot">Planes y tarifas referenciales sujetos a condiciones de contratación y disponibilidad.</p>
+      </div>
+    </section>
+
+    <section class="section faq" id="preguntas">
+      <div class="container faq-grid">
+        <div class="faq-intro reveal">
+          <span class="section-kicker">RESPUESTAS CLARAS</span>
+          <h2>¿Todavía tienes <span>dudas?</span></h2>
+          <p>No necesitas dominar la tecnología para comenzar. Solo trae tus preguntas y tus ganas de avanzar.</p>
+          <a href="register.html" class="faq-link">Quiero empezar ↗</a>
+        </div>
+
+        <div class="faq-list reveal">
+          <details open>
+            <summary>¿TesisLive hace mi tesis por mí? <span>+</span></summary>
+            <p>No. TesisLive te orienta, explica conceptos y revisa avances para que desarrolles tu propia investigación.</p>
+          </details>
+
+          <details>
+            <summary>¿Puedo subir documentos PDF? <span>+</span></summary>
+            <p>Sí. La plataforma está pensada para revisar documentos y devolverte observaciones útiles para mejorar tu trabajo.</p>
+          </details>
+
+          <details>
+            <summary>¿Necesito saber usar inteligencia artificial? <span>+</span></summary>
+            <p>No. Puedes escribir tus dudas de forma natural y recibir explicaciones claras y fáciles de entender.</p>
+          </details>
+
+          <details>
+            <summary>¿Cómo funciona la prueba gratuita? <span>+</span></summary>
+            <p>El plan Pro contempla un periodo inicial de 7 días. Las condiciones de activación y renovación se mostrarán durante el registro.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div class="cta-copy">
+            <span>✦ TU SIGUIENTE CAPÍTULO EMPIEZA AQUÍ</span>
+            <h2>Las grandes investigaciones también empiezan con una pregunta.</h2>
+            <p>Y no tienes que encontrar todas las respuestas a solas.</p>
+            <a href="register.html" class="btn btn-light">Comenzar mis 7 días gratis ↗</a>
+          </div>
+          <img src="assets/logo-icono.png" alt="" class="cta-logo-mark">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="#inicio" class="brand footer-brand">
+            <img src="assets/logo-icono.png" alt="Logo de TesisLive">
+            <span>Tesis<span class="brand-accent">Live</span></span>
+          </a>
+          <p>Una mejor guía para tus mejores ideas.</p>
+        </div>
+
+        <nav class="footer-links">
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#herramientas">Herramientas</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#planes">Planes</a>
+          <a href="#preguntas">Preguntas</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 TesisLive. Todos los derechos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

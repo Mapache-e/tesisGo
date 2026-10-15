@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F7F8F3">
+  <title>Iniciar sesión | TesisLive</title>
+  <link rel="icon" href="assets/logo-icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+  <script src="auth.js" defer></script>
+</head>
+<body class="auth-body">
+  <main class="auth-layout">
+    <!-- PANEL IZQUIERDO -->
+    <aside class="auth-showcase">
+      <a href="index.html" class="auth-brand auth-brand-light">
+        <img src="assets/logo-icono.png" alt="">
+        <span>Tesis<strong>Live</strong></span>
+      </a>
+      <div class="showcase-content">
+        <div class="showcase-label">
+          <span>✦</span>
+          TU INVESTIGACIÓN CONTINÚA AQUÍ
+        </div>
+        <h1>
+          Cada avance te acerca a tu
+          <em>gran objetivo.</em>
+        </h1>
+        <p>
+          Retoma tu investigación, revisa tus avances
+          y continúa construyendo tus ideas con el
+          acompañamiento de TesisLive.
+        </p>
+        <div class="showcase-features">
+          <div>
+            <span class="showcase-check">✓</span>
+            <span>Tus documentos y proyectos organizados</span>
+          </div>
+          <div>
+            <span class="showcase-check">✓</span>
+            <span>Orientación académica cuando la necesites</span>
+          </div>
+          <div>
+            <span class="showcase-check">✓</span>
+            <span>Un espacio para seguir aprendiendo</span>
+          </div>
+        </div>
+        <div class="showcase-preview">
+          <div class="showcase-preview-top">
+            <span>✦ TesisLive</span>
+            <span>Tu progreso</span>
+          </div>
+          <div class="showcase-progress">
+            <div>
+              <span>Mi investigación</span>
+              <strong>Un paso más cerca de tu meta</strong>
+            </div>
+            <div class="showcase-progress-bar">
+              <span></span>
+            </div>
+            <small>Continúa donde lo dejaste.</small>
+          </div>
+        </div>
+      </div>
+      <div class="showcase-bottom">
+        <span>APRENDE · REVISA · AVANZA</span>
+        <span>© 2026 TesisLive</span>
+      </div>
+    </aside>
+    <!-- PANEL DERECHO -->
+    <section class="auth-main">
+      <div class="auth-mobile-brand">
+        <a href="index.html" class="auth-brand">
+          <img src="assets/logo-icono.png" alt="">
+          <span>Tesis<strong>Live</strong></span>
+        </a>
+      </div>
+      <a href="index.html" class="auth-back">
+        <span>←</span> Volver al inicio
+      </a>
+      <div class="auth-card auth-card-login">
+        <div class="auth-heading">
+          <div class="auth-heading-icon">
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M5 21v-2a7 7 0 0 1 14 0v2"></path>
+            </svg>
+          </div>
+          <h2>¡Bienvenido de nuevo!</h2>
+          <p>
+            Inicia sesión y continúa avanzando
+            en tu investigación.
+          </p>
+        </div>
+        <form id="loginForm" class="auth-form" novalidate>
+          <div class="form-group">
+            <label for="loginCorreo">Correo institucional</label>
+            <input
+              type="email"
+              id="loginCorreo"
+              name="correo"
+              placeholder="tunombre@universidad.edu.pe"
+              autocomplete="username"
+              required
+            >
+            <small class="field-error" id="loginCorreoError"></small>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Contraseña</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="loginPassword"
+                name="password"
+                placeholder="Ingresa tu contraseña"
+                autocomplete="current-password"
+                required
+              >
+              <button
+                type="button"
+                class="password-toggle"
+                data-target="loginPassword"
+                aria-label="Mostrar contraseña"
+                aria-pressed="false"
+              >
+                <svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.8">
+                  <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12Z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+            <small class="field-error" id="loginPasswordError"></small>
+          </div>
+          <div class="login-options">
+            <label class="remember-option">
+              <input type="checkbox" id="rememberMe" name="rememberMe">
+              <span>Recordarme</span>
+            </label>
+            <a href="#" id="forgotPassword">
+              ¿Olvidaste tu contraseña?
+            </a>
+          </div>
+          <button type="button" class="auth-submit"
+        onclick="window.location.href='dashboard.html'">
+  Iniciar sesión <span></span>
+</button>
+          <div class="form-status" id="loginStatus"
+            role="status" aria-live="polite" hidden></div>
+        </form>
+        <p class="auth-switch">
+          ¿Aún no tienes una cuenta?
+          <a href="Register.html">Regístrate gratis</a>
+        </p>
+      </div>
+      <p class="auth-disclaimer">
+        Tu investigación, tus ideas, tu progreso.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

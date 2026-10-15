@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="es" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#203824">
+  <title>Mis proyectos | TesisLive</title>
+
+  <link rel="icon" href="assets/logo-icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="proyectos.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="proyectos.js" defer></script>
+</head>
+
+<body>
+<div class="app-shell">
+
+  <!-- SIDEBAR COMPARTIDO -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+      <a class="brand" href="dashboard.html" title="TesisLive">
+        <img src="assets/logo-icono.png" alt="">
+        <span class="sidebar-label">
+          Tesis<strong>Live</strong>
+        </span>
+      </a>
+
+      <button class="sidebar-collapse" id="sidebarCollapse"
+        type="button" aria-label="Contraer menú">
+        <i data-lucide="panel-left-close"></i>
+      </button>
+    </div>
+
+    <div class="sidebar-content">
+      <p class="sidebar-caption sidebar-label">
+        ESPACIO DE TRABAJO
+      </p>
+
+      <nav class="sidebar-nav" aria-label="Menú principal">
+        <a class="nav-link" href="dashboard.html"
+          data-page="inicio" title="Inicio">
+          <i data-lucide="layout-dashboard"></i>
+          <span class="sidebar-label">Inicio</span>
+        </a>
+
+        <a class="nav-link" href="asesor-ia.html"
+          data-page="asesor-ia" title="Asesor IA">
+          <i data-lucide="bot"></i>
+          <span class="sidebar-label">Asesor IA</span>
+        </a>
+
+        <a class="nav-link" href="proyectos.html"
+          data-page="proyectos" title="Mis proyectos">
+          <i data-lucide="folder-open"></i>
+          <span class="sidebar-label">Mis proyectos</span>
+        </a>
+
+        <a class="nav-link" href="biblioteca.html"
+          data-page="biblioteca" title="Biblioteca">
+          <i data-lucide="library-big"></i>
+          <span class="sidebar-label">Biblioteca</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+      <a class="nav-link" href="configuracion.html"
+        data-page="configuracion" title="Configuración">
+        <i data-lucide="settings"></i>
+        <span class="sidebar-label">Configuración</span>
+      </a>
+
+      <a class="nav-link" href="login.html" id="logoutLink" title="Salir">
+        <i data-lucide="log-out"></i>
+        <span class="sidebar-label">Salir</span>
+      </a>
+
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">D</div>
+        <div class="sidebar-user-info sidebar-label">
+          <strong>Diego</strong>
+          <small>Plan Pro</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="main-area">
+
+    <header class="dashboard-header">
+      <div class="header-left">
+        <button class="mobile-menu-button" id="mobileMenu"
+          type="button" aria-label="Abrir menú" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <div class="header-breadcrumb">
+          <span>Mi espacio</span>
+          <i data-lucide="chevron-right"></i>
+          <strong>Mis proyectos</strong>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <button class="header-icon-button" id="notificationButton"
+          type="button" aria-label="Notificaciones"
+          aria-expanded="false">
+          <i data-lucide="bell"></i>
+          <span class="notification-dot"></span>
+        </button>
+
+        <div class="header-divider"></div>
+
+        <div class="header-profile">
+          <div class="header-profile-info">
+            <strong>Diego</strong>
+            <span>Estudiante</span>
+          </div>
+          <div class="profile-avatar">D</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="projects-main">
+      <div class="projects-container">
+
+        <!-- INTRODUCCIÓN -->
+        <section class="projects-heading">
+          <div class="projects-heading-content">
+            <div class="page-eyebrow">
+              <span class="eyebrow-dot"></span>
+              ORGANIZA TU INVESTIGACIÓN
+            </div>
+
+            <h1>Mis proyectos</h1>
+            <p>
+              Mantén tus investigaciones organizadas,
+              consulta tus avances y continúa trabajando
+              en tus documentos desde un solo lugar.
+            </p>
+          </div>
+
+          <button class="primary-action" id="newProjectButton"
+            type="button">
+            <i data-lucide="plus"></i>
+            Nuevo proyecto
+          </button>
+        </section>
+
+        <!-- PESTAÑAS -->
+        <div class="projects-tabs" role="tablist"
+          aria-label="Secciones de mis proyectos">
+
+          <button class="project-tab active"
+            id="tab-documentos"
+            data-tab="documentos"
+            type="button" role="tab"
+            aria-selected="true"
+            aria-controls="panel-documentos">
+            <i data-lucide="files"></i>
+            Documentos
+          </button>
+
+          <button class="project-tab"
+            id="tab-progreso"
+            data-tab="progreso"
+            type="button" role="tab"
+            aria-selected="false"
+            aria-controls="panel-progreso">
+            <i data-lucide="chart-no-axes-column"></i>
+            Progreso
+          </button>
+
+          <button class="project-tab"
+            id="tab-resumen"
+            data-tab="resumen"
+            type="button" role="tab"
+            aria-selected="false"
+            aria-controls="panel-resumen">
+            <i data-lucide="layout-dashboard"></i>
+            Resumen
+          </button>
+        </div>
+
+        <!-- DOCUMENTOS -->
+        <section class="tab-panel" id="panel-documentos"
+          role="tabpanel" aria-labelledby="tab-documentos">
+
+          <div class="section-toolbar">
+            <div>
+              <h2>Tus investigaciones</h2>
+              <p>Accede a los proyectos y documentos que estás desarrollando.</p>
+            </div>
+
+            <div class="toolbar-controls">
+              <label class="project-search">
+                <i data-lucide="search"></i>
+                <input id="projectSearch" type="search"
+                  placeholder="Buscar proyecto..."
+                  aria-label="Buscar proyecto">
+              </label>
+
+              <select id="projectFilter"
+                class="project-select"
+                aria-label="Filtrar proyectos">
+                <option value="todos">Todos</option>
+                <option value="desarrollo">En desarrollo</option>
+                <option value="finalizado">Finalizados</option>
+                <option value="borrador">Borradores</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="documents-list" id="documentsList">
+            <!-- Generado desde JavaScript -->
+          </div>
+
+          <p class="projects-footnote">
+            <i data-lucide="info"></i>
+            El porcentaje representa etapas completadas,
+            no una calificación académica.
+          </p>
+        </section>
+
+        <!-- PROGRESO -->
+        <section class="tab-panel" id="panel-progreso"
+          role="tabpanel" aria-labelledby="tab-progreso" hidden>
+
+          <div class="section-toolbar">
+            <div>
+              <h2>Seguimiento de avances</h2>
+              <p>Consulta las etapas completadas y lo que falta por desarrollar.</p>
+            </div>
+          </div>
+
+          <div class="progress-summary-grid">
+            <article class="project-metric">
+              <span class="metric-icon">
+                <i data-lucide="folder-check"></i>
+              </span>
+              <p>Proyectos registrados</p>
+              <strong id="progressProjectCount">0</strong>
+            </article>
+
+            <article class="project-metric">
+              <span class="metric-icon">
+                <i data-lucide="circle-check-big"></i>
+              </span>
+              <p>Etapas completadas</p>
+              <strong id="completedStagesCount">0</strong>
+            </article>
+
+            <article class="project-metric">
+              <span class="metric-icon">
+                <i data-lucide="clock-3"></i>
+              </span>
+              <p>Etapas pendientes</p>
+              <strong id="pendingStagesCount">0</strong>
+            </article>
+          </div>
+
+          <div class="project-progress-list" id="progressList">
+            <!-- Generado desde JavaScript -->
+          </div>
+        </section>
+
+        <!-- RESUMEN -->
+        <section class="tab-panel" id="panel-resumen"
+          role="tabpanel" aria-labelledby="tab-resumen" hidden>
+
+          <div class="section-toolbar">
+            <div>
+              <h2>Resumen general</h2>
+              <p>Una vista rápida del estado de tus investigaciones.</p>
+            </div>
+          </div>
+
+          <div class="summary-metrics">
+            <article class="project-metric">
+              <span class="metric-icon">
+                <i data-lucide="folder-open"></i>
+              </span>
+              <p>Proyectos activos</p>
+              <strong id="summaryActive">0</strong>
+            </article>
+
+            <article class="project-metric">
+              <span class="metric-icon">
+                <i data-lucide="files"></i>
+              </span>
+              <p>Documentos registrados</p>
+              <strong id="summaryDocuments">0</strong>
+            </article>
+
+            <article class="project-metric">
+              <span class="metric-icon">
+                <i data-lucide="file-check-2"></i>
+              </span>
+              <p>Proyectos finalizados</p>
+              <strong id="summaryFinished">0</strong>
+            </article>
+
+            <article class="project-metric">
+              <span class="metric-icon">
+                <i data-lucide="chart-no-axes-column"></i>
+              </span>
+              <p>Avance promedio</p>
+              <strong id="summaryAverage">0%</strong>
+            </article>
+          </div>
+
+          <div class="summary-layout">
+            <article class="project-panel">
+              <div class="panel-title">
+                <div>
+                  <span class="card-eyebrow">INVESTIGACIONES</span>
+                  <h3>Proyectos recientes</h3>
+                </div>
+                <i data-lucide="folder-open"></i>
+              </div>
+              <div id="recentProjects"></div>
+            </article>
+
+            <article class="project-panel">
+              <div class="panel-title">
+                <div>
+                  <span class="card-eyebrow">ACTIVIDAD</span>
+                  <h3>Últimos movimientos</h3>
+                </div>
+                <i data-lucide="history"></i>
+              </div>
+              <div id="projectActivity"></div>
+            </article>
+          </div>
+        </section>
+
+        <footer class="dashboard-footer">
+          <span>TesisLive · Tu investigación, mejor acompañada.</span>
+          <span>© 2026 TesisLive</span>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- MODAL: NUEVO PROYECTO -->
+<div class="modal-backdrop" id="projectModal" hidden>
+  <div class="project-modal" role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle">
+
+    <div class="modal-heading">
+      <div>
+        <span class="card-eyebrow">MI INVESTIGACIÓN</span>
+        <h2 id="modalTitle">Nuevo proyecto</h2>
+        <p>Organiza tu trabajo académico desde el inicio.</p>
+      </div>
+
+      <button class="modal-close" id="closeProjectModal"
+        type="button" aria-label="Cerrar">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <form id="projectForm">
+      <label class="modal-field">
+        Nombre del proyecto
+        <input type="text" id="projectName"
+          placeholder="Ej. Impacto de la IA en la educación"
+          maxlength="100" required>
+      </label>
+
+      <label class="modal-field">
+        Tipo de investigación
+        <select id="projectType">
+          <option value="Tesis">Tesis</option>
+          <option value="Paper">Paper</option>
+          <option value="Trabajo académico">Trabajo académico</option>
+          <option value="Proyecto de investigación">Proyecto de investigación</option>
+        </select>
+      </label>
+
+      <label class="modal-field">
+        Descripción (opcional)
+        <textarea id="projectDescription" rows="3"
+          maxlength="300"
+          placeholder="Describe brevemente tu investigación..."></textarea>
+      </label>
+
+      <div class="modal-actions">
+        <button type="button" class="secondary-action"
+          id="cancelProjectModal">Cancelar</button>
+        <button type="submit" class="primary-action">
+          Crear proyecto
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- NOTIFICACIONES -->
+<div class="notification-popover" id="notificationPopover" hidden>
+  <strong>Notificaciones</strong>
+  <p>No hay notificaciones nuevas en esta demostración.</p>
+</div>
+
+<!-- MENSAJES -->
+<div class="projects-toast" id="projectsToast"
+  role="status" aria-live="polite" hidden></div>
+
+</body>
+</html>
